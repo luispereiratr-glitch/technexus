@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNexus | Ingressos</title>
+    <link rel="icon" type="image/png" href="img/logo.sem.texto.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-dark">
+    <!-- ===== MENU (igual em todas as páginas) ===== -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-technexus" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand py-0" href="index.html">
+                    <img src="img/logo.horizontal.png" alt="TechNexus" width="200" height="48">
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-xl-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-2 d-md-none"></i>Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html"><i class="bi bi-building me-2 d-md-none"></i>Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="programacao_dia.html"><i class="bi bi-calendar-event me-2 d-md-none"></i>Programação</a></li>
+                        <li class="nav-item"><a class="nav-link" href="palestras.html"><i class="bi bi-mic me-2 d-md-none"></i>Palestras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="expositores.html"><i class="bi bi-people me-2 d-md-none"></i>Expositores</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="comprar_ingresso.html"><i class="bi bi-ticket-perforated me-2 d-md-none"></i>Ingressos</a></li>
+                    </ul>
+                    <a href="saiba_mais.html" class="btn btn-saiba-mais fw-semibold text-nowrap px-3 px-xl-4"><i class="bi bi-envelope-paper me-2"></i>Saiba mais</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text-white py-5 mb-5 text-center shadow-sm banner-technexus">
+            <div class="container">
+                <h1 class="display-5 fw-bold mb-2">Ingressos</h1>
+                <p class="mb-0">Garanta sua vaga nas palestras, na feira de startups e no certificado de 8 horas.</p>
+            </div>
+        </section>
+
+        <!-- ===== TIPOS DE INGRESSO ===== -->
+        <section class="container mb-5">
+            <div class="text-center mb-4">
+                <h2 class="h3 fw-bold text-dark">Escolha o seu ingresso</h2>
+                <p class="text-body-secondary">Todos os ingressos dão acesso às três palestras e ao certificado digital.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-primary-subtle text-primary-emphasis align-self-start mb-3">Meia-entrada</span>
+                            <h3 class="h4 fw-bold mb-1">Estudante</h3>
+                            <p class="display-6 fw-bold mb-3">R$ 60<small class="fs-6 text-body-secondary fw-normal">,00</small></p>
+                            <ul class="list-unstyled text-body-secondary small mb-4">
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Acesso às 3 palestras</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Feira de startups</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Certificado de 8 horas</li>
+                                <li><i class="bi bi-info-circle text-primary me-2"></i>Apresente o comprovante de matrícula na entrada</li>
+                            </ul>
+                            <a href="#compra" class="btn btn-outline-primary fw-semibold mt-auto" data-ingresso="estudante">Selecionar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow border-primary border-2">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge text-bg-primary align-self-start mb-3">Mais escolhido</span>
+                            <h3 class="h4 fw-bold mb-1">Inteira</h3>
+                            <p class="display-6 fw-bold mb-3">R$ 120<small class="fs-6 text-body-secondary fw-normal">,00</small></p>
+                            <ul class="list-unstyled text-body-secondary small mb-4">
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Acesso às 3 palestras</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Feira de startups</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Certificado de 8 horas</li>
+                                <li><i class="bi bi-check2 text-primary me-2"></i>Coffee break incluso</li>
+                            </ul>
+                            <a href="#compra" class="btn btn-primary fw-semibold mt-auto" data-ingresso="inteira">Selecionar</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm border-0">
+                        <div class="card-body p-4 d-flex flex-column">
+                            <span class="badge bg-primary-subtle text-primary-emphasis align-self-start mb-3">Vagas limitadas</span>
+                            <h3 class="h4 fw-bold mb-1">VIP</h3>
+                            <p class="display-6 fw-bold mb-3">R$ 220<small class="fs-6 text-body-secondary fw-normal">,00</small></p>
+                            <ul class="list-unstyled text-body-secondary small mb-4">
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Tudo do ingresso Inteira</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Lugares reservados nas primeiras fileiras</li>
+                                <li class="mb-2"><i class="bi bi-check2 text-primary me-2"></i>Encontro com os palestrantes</li>
+                                <li><i class="bi bi-check2 text-primary me-2"></i>Kit TechNexus</li>
+                            </ul>
+                            <a href="#compra" class="btn btn-outline-primary fw-semibold mt-auto" data-ingresso="vip">Selecionar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FORMULÁRIO DE COMPRA ===== -->
+        <section class="container mb-5" id="compra">
+            <form action="#" method="post" class="row g-4 align-items-start" id="formCompra">
+                <div class="col-12 col-lg-8">
+                    <div class="card shadow-sm border-0 form-card">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="h4 fw-bold mb-2">Finalize sua compra</h2>
+                            <p class="text-body-secondary small mb-4">Os campos marcados com * são obrigatórios.</p>
+
+                            <!-- 1. Ingresso -->
+                            <h3 class="h6 text-uppercase fw-bold text-primary-emphasis mb-3"><span class="badge rounded-pill text-bg-primary me-2">1</span>Ingresso</h3>
+                            <div class="row g-3 mb-3">
+                                <div class="col-12 col-sm-4">
+                                    <input type="radio" class="btn-check" name="ingresso" id="ingresso-estudante" value="estudante" data-preco="60" data-nome="Estudante (meia)" autocomplete="off" required>
+                                    <label class="btn btn-outline-primary w-100 py-3" for="ingresso-estudante"><span class="d-block fw-semibold">Estudante</span><small>R$ 60,00</small></label>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <input type="radio" class="btn-check" name="ingresso" id="ingresso-inteira" value="inteira" data-preco="120" data-nome="Inteira" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary w-100 py-3" for="ingresso-inteira"><span class="d-block fw-semibold">Inteira</span><small>R$ 120,00</small></label>
+                                </div>
+                                <div class="col-12 col-sm-4">
+                                    <input type="radio" class="btn-check" name="ingresso" id="ingresso-vip" value="vip" data-preco="220" data-nome="VIP" autocomplete="off">
+                                    <label class="btn btn-outline-primary w-100 py-3" for="ingresso-vip"><span class="d-block fw-semibold">VIP</span><small>R$ 220,00</small></label>
+                                </div>
+                            </div>
+                            <div class="row g-3 mb-4">
+                                <div class="col-6 col-sm-4">
+                                    <label for="quantidade" class="form-label fw-semibold">Quantidade *</label>
+                                    <select class="form-select" id="quantidade" name="quantidade" autocomplete="off" required>
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-sm-8 d-none" id="campoInstituicao">
+                                    <label for="instituicao" class="form-label fw-semibold">Instituição de ensino *</label>
+                                    <input type="text" class="form-control" id="instituicao" name="instituicao" placeholder="Nome da sua faculdade ou escola" autocomplete="organization" autocapitalize="words" list="listaInstituicoes" disabled>
+                                    <datalist id="listaInstituicoes">
+                                        <option value="UFRGS — Universidade Federal do Rio Grande do Sul">
+                                        <option value="PUCRS — Pontifícia Universidade Católica do RS">
+                                        <option value="UNISINOS">
+                                        <option value="IFRS — Instituto Federal do Rio Grande do Sul">
+                                        <option value="SENAC RS">
+                                    </datalist>
+                                </div>
+                            </div>
+
+                            <!-- 2. Dados -->
+                            <h3 class="h6 text-uppercase fw-bold text-primary-emphasis mb-3"><span class="badge rounded-pill text-bg-primary me-2">2</span>Seus dados</h3>
+                            <div class="row g-3 mb-4">
+                                <div class="col-12">
+                                    <label for="nome" class="form-label fw-semibold">Nome completo *</label>
+                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Como deve aparecer no certificado" autocomplete="name" autocapitalize="words" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="email" class="form-label fw-semibold">E-mail *</label>
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
+                                    <div class="form-text">O ingresso será enviado para este e-mail.</div>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="telefone" class="form-label fw-semibold">Celular *</label>
+                                    <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel-national" inputmode="tel" data-mascara="telefone" maxlength="15" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="cpf" class="form-label fw-semibold">CPF *</label>
+                                    <input type="text" class="form-control" id="cpf" name="cpf" placeholder="000.000.000-00" autocomplete="off" inputmode="numeric" data-mascara="cpf" maxlength="14" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" required>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="cep" class="form-label fw-semibold">CEP</label>
+                                    <input type="text" class="form-control" id="cep" name="cep" placeholder="00000-000" autocomplete="postal-code" inputmode="numeric" data-mascara="cep" maxlength="9">
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <label for="cidade" class="form-label fw-semibold">Cidade</label>
+                                    <input type="text" class="form-control" id="cidade" name="cidade" placeholder="Sua cidade" autocomplete="address-level2" autocapitalize="words">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label for="estado" class="form-label fw-semibold">Estado</label>
+                                    <select class="form-select" id="estado" name="estado" autocomplete="address-level1">
+                                        <option value="">UF</option>
+                                        <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- 3. Pagamento -->
+                            <h3 class="h6 text-uppercase fw-bold text-primary-emphasis mb-3"><span class="badge rounded-pill text-bg-primary me-2">3</span>Pagamento</h3>
+                            <div class="d-flex flex-wrap gap-2 mb-3">
+                                <input type="radio" class="btn-check" name="pagamento" id="pag-pix" value="pix" autocomplete="off" checked>
+                                <label class="btn btn-outline-primary px-4" for="pag-pix"><i class="bi bi-qr-code me-2"></i>Pix</label>
+                                <input type="radio" class="btn-check" name="pagamento" id="pag-cartao" value="cartao" autocomplete="off">
+                                <label class="btn btn-outline-primary px-4" for="pag-cartao"><i class="bi bi-credit-card me-2"></i>Cartão de crédito</label>
+                                <input type="radio" class="btn-check" name="pagamento" id="pag-boleto" value="boleto" autocomplete="off">
+                                <label class="btn btn-outline-primary px-4" for="pag-boleto"><i class="bi bi-upc me-2"></i>Boleto</label>
+                            </div>
+
+                            <div class="alert alert-primary small mb-4" id="infoPix"><i class="bi bi-lightning-charge-fill me-2"></i>O QR Code do Pix aparece após finalizar a compra. A confirmação é imediata.</div>
+                            <div class="alert alert-secondary small mb-4 d-none" id="infoBoleto"><i class="bi bi-clock-history me-2"></i>O boleto vence em 2 dias úteis. A vaga é confirmada após a compensação.</div>
+
+                            <fieldset class="row g-3 mb-4 d-none" id="dadosCartao" disabled>
+                                <legend class="visually-hidden">Dados do cartão</legend>
+                                <div class="col-12">
+                                    <label for="cartaoNumero" class="form-label fw-semibold">Número do cartão *</label>
+                                    <input type="text" class="form-control" id="cartaoNumero" name="cartaoNumero" placeholder="0000 0000 0000 0000" autocomplete="cc-number" inputmode="numeric" data-mascara="cartao" maxlength="19" required>
+                                </div>
+                                <div class="col-12">
+                                    <label for="cartaoNome" class="form-label fw-semibold">Nome impresso no cartão *</label>
+                                    <input type="text" class="form-control text-uppercase" id="cartaoNome" name="cartaoNome" placeholder="NOME COMO NO CARTÃO" autocomplete="cc-name" autocapitalize="characters" spellcheck="false" required>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <label for="cartaoValidade" class="form-label fw-semibold">Validade *</label>
+                                    <input type="text" class="form-control" id="cartaoValidade" name="cartaoValidade" placeholder="MM/AA" autocomplete="cc-exp" inputmode="numeric" data-mascara="validade" maxlength="5" required>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <label for="cartaoCvv" class="form-label fw-semibold">CVV *</label>
+                                    <input type="text" class="form-control" id="cartaoCvv" name="cartaoCvv" placeholder="000" autocomplete="cc-csc" inputmode="numeric" maxlength="4" required>
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <label for="parcelas" class="form-label fw-semibold">Parcelas</label>
+                                    <select class="form-select" id="parcelas" name="parcelas" autocomplete="off">
+                                        <option value="1">1x sem juros</option>
+                                        <option value="2">2x sem juros</option>
+                                        <option value="3">3x sem juros</option>
+                                    </select>
+                                </div>
+                            </fieldset>
+
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="sim" id="termos" name="termos" required>
+                                <label class="form-check-label small text-body-secondary" for="termos">Li e aceito as regras de uso do ingresso e a política de cancelamento. *</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumo do pedido -->
+                <div class="col-12 col-lg-4">
+                    <div class="card shadow-sm border-0 form-card resumo-pedido">
+                        <div class="card-body p-4">
+                            <h2 class="h5 fw-bold mb-3"><i class="bi bi-ticket-perforated me-2"></i>Resumo do pedido</h2>
+                            <ul class="list-group list-group-flush mb-3">
+                                <li class="list-group-item d-flex justify-content-between px-0">
+                                    <span class="text-body-secondary">Ingresso</span>
+                                    <span class="fw-semibold" id="resumoIngresso">Inteira</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between px-0">
+                                    <span class="text-body-secondary">Quantidade</span>
+                                    <span class="fw-semibold" id="resumoQtd">1</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between px-0">
+                                    <span class="text-body-secondary">Valor unitário</span>
+                                    <span class="fw-semibold" id="resumoUnitario">R$ 120,00</span>
+                                </li>
+                                <li class="list-group-item d-flex justify-content-between px-0">
+                                    <span class="fw-bold">Total</span>
+                                    <span class="fw-bold fs-5" id="resumoTotal">R$ 120,00</span>
+                                </li>
+                            </ul>
+                            <button type="submit" class="btn btn-primary btn-lg w-100 fw-semibold"><i class="bi bi-lock-fill me-2"></i>Finalizar compra</button>
+                            <p class="small text-body-secondary text-center mt-3 mb-0"><i class="bi bi-shield-check me-1"></i>Pagamento seguro</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </section>
+
+        <!-- ===== DÚVIDAS ===== -->
+        <section class="container mb-5">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <h2 class="h3 fw-bold text-dark text-center mb-4">Dúvidas frequentes</h2>
+                    <div class="accordion" id="duvidas">
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#duvida1" aria-expanded="true" aria-controls="duvida1">Quem tem direito à meia-entrada?</button>
+                            </h3>
+                            <div id="duvida1" class="accordion-collapse collapse show" data-bs-parent="#duvidas">
+                                <div class="accordion-body text-body-secondary">Estudantes com matrícula ativa, professores, pessoas com deficiência e pessoas a partir de 60 anos. É preciso apresentar o comprovante na entrada do evento.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#duvida2" aria-expanded="false" aria-controls="duvida2">Como recebo meu ingresso?</button>
+                            </h3>
+                            <div id="duvida2" class="accordion-collapse collapse" data-bs-parent="#duvidas">
+                                <div class="accordion-body text-body-secondary">Depois da confirmação do pagamento, o ingresso com QR Code chega no e-mail informado. Basta mostrar no celular na entrada do auditório.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#duvida3" aria-expanded="false" aria-controls="duvida3">Posso cancelar a compra?</button>
+                            </h3>
+                            <div id="duvida3" class="accordion-collapse collapse" data-bs-parent="#duvidas">
+                                <div class="accordion-body text-body-secondary">Sim. O cancelamento pode ser pedido em até 7 dias após a compra, desde que falte pelo menos 48 horas para o evento.</div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h3 class="accordion-header">
+                                <button class="accordion-button collapsed fw-semibold" type="button" data-bs-toggle="collapse" data-bs-target="#duvida4" aria-expanded="false" aria-controls="duvida4">O certificado está incluso?</button>
+                            </h3>
+                            <div id="duvida4" class="accordion-collapse collapse" data-bs-parent="#duvidas">
+                                <div class="accordion-body text-body-secondary">Sim. Todos os ingressos dão direito ao certificado digital de 8 horas, enviado por e-mail ao final do evento.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="footer-technexus text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 g-lg-5">
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="d-inline-block mb-3">
+                        <img src="img/logo.horizontal.png" alt="TechNexus" width="200" height="48">
+                    </a>
+                    <p class="footer-texto small mb-4">Conectando estudantes, pesquisadores, desenvolvedores e profissionais em encontros sobre Inteligência Artificial, Cibersegurança e Sustentabilidade Digital.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="footer-social" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h2 class="footer-titulo">Navegação</h2>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="programacao_dia.html">Programação</a></li>
+                        <li><a href="palestras.html">Palestras</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h2 class="footer-titulo">Evento</h2>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li><a href="expositores.html">Expositores</a></li>
+                        <li><a href="comprar_ingresso.html">Ingressos</a></li>
+                        <li><a href="anuncie.html">Anuncie aqui</a></li>
+                        <li><a href="saiba_mais.html">Saiba mais</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4">
+                    <h2 class="footer-titulo">Local e horário</h2>
+                    <ul class="list-unstyled footer-texto small mb-4">
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685 — Parque Farroupilha, Porto Alegre - RS</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 08h30 às 17h00</span></li>
+                    </ul>
+                    <a href="saiba_mais.html" class="btn btn-saiba-mais btn-sm fw-semibold px-3">Tire suas dúvidas</a>
+                </div>
+            </div>
+
+            <hr class="footer-linha my-4">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small footer-texto text-center">
+                <span>&copy; 2026 TechNexus Conferências Brasil. Todos os direitos reservados.</span>
+                <a href="#" class="footer-topo">Voltar ao topo <i class="bi bi-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <script src="js/formularios.js"></script>
+    <script>
+        // Atualiza o resumo do pedido e mostra os campos certos para cada escolha
+        (function () {
+            const form = document.getElementById("formCompra");
+            const qtd = document.getElementById("quantidade");
+            const real = v => v.toLocaleString("pt-BR", { style: "currency", currency: "BRL" });
+
+            function atualizar() {
+                const escolhido = form.querySelector('input[name="ingresso"]:checked');
+                const preco = Number(escolhido.dataset.preco);
+                document.getElementById("resumoIngresso").textContent = escolhido.dataset.nome;
+                document.getElementById("resumoQtd").textContent = qtd.value;
+                document.getElementById("resumoUnitario").textContent = real(preco);
+                document.getElementById("resumoTotal").textContent = real(preco * Number(qtd.value));
+
+                // Estudante precisa informar a instituição
+                const estudante = escolhido.value === "estudante";
+                document.getElementById("campoInstituicao").classList.toggle("d-none", !estudante);
+                document.getElementById("instituicao").disabled = !estudante;
+                document.getElementById("instituicao").required = estudante;
+
+                // Campos de cartão só aparecem (e só são obrigatórios) no cartão
+                const pagamento = form.querySelector('input[name="pagamento"]:checked').value;
+                document.getElementById("dadosCartao").classList.toggle("d-none", pagamento !== "cartao");
+                document.getElementById("dadosCartao").disabled = pagamento !== "cartao";
+                document.getElementById("infoPix").classList.toggle("d-none", pagamento !== "pix");
+                document.getElementById("infoBoleto").classList.toggle("d-none", pagamento !== "boleto");
+            }
+
+            form.addEventListener("change", atualizar);
+
+            // Botões "Selecionar" dos cards já marcam o ingresso no formulário
+            document.querySelectorAll("[data-ingresso]").forEach(botao => {
+                botao.addEventListener("click", () => {
+                    document.getElementById("ingresso-" + botao.dataset.ingresso).checked = true;
+                    atualizar();
+                });
+            });
+
+            atualizar();
+        })();
+    </script>
+</body>
+</html>
