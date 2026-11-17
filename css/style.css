@@ -1,0 +1,351 @@
+:root {
+    --azul-marinho: #091c52;
+    --azul: #0d6efd;
+    --roxo: #6950a1;
+    --texto: #212529;
+    --cinza: #6c757d;
+    --fundo-claro: #f5f6fa;
+}
+
+body {
+    font-family: "Inter", Arial, Helvetica, sans-serif;
+    color: var(--texto);
+    background-color: #fff;
+}
+
+/* ===================== MENU ===================== */
+.navbar-technexus {
+    background: rgba(9, 28, 82, .96);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+    box-shadow: 0 4px 18px rgba(9, 28, 82, .25);
+}
+
+.navbar-logo {
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.navbar-technexus .navbar-brand span {
+    letter-spacing: .02em;
+}
+
+.navbar-technexus .nav-link {
+    color: rgba(255, 255, 255, .8);
+    font-weight: 500;
+    border-radius: 8px;
+    padding: .5rem .85rem !important;
+    transition: background-color .2s, color .2s;
+}
+
+.navbar-technexus .nav-link:hover,
+.navbar-technexus .nav-link:focus {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .08);
+}
+
+.navbar-technexus .nav-link.active {
+    color: #fff;
+    background-color: rgba(105, 80, 161, .55);
+}
+
+.btn-saiba-mais {
+    color: var(--azul-marinho);
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    transition: background-color .2s, color .2s, transform .2s;
+}
+
+.btn-saiba-mais:hover,
+.btn-saiba-mais:focus,
+.btn-saiba-mais.active {
+    color: #fff;
+    background-color: var(--roxo);
+    border-color: var(--roxo);
+    transform: translateY(-1px);
+}
+
+/* No celular o menu aberto vira uma lista com separação */
+@media (max-width: 991.98px) {
+    .navbar-technexus .navbar-collapse {
+        padding: .75rem 0 1rem;
+    }
+
+    .navbar-technexus .btn-saiba-mais {
+        width: 100%;
+    }
+}
+
+/* ===================== RODAPÉ ===================== */
+.footer-technexus {
+    background: linear-gradient(160deg, #071640 0%, var(--azul-marinho) 55%, #2c2466 100%);
+}
+
+.footer-titulo {
+    font-size: .8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.footer-texto {
+    color: rgba(255, 255, 255, .7);
+}
+
+.footer-links li {
+    margin-bottom: .55rem;
+}
+
+.footer-links a,
+.footer-topo {
+    color: rgba(255, 255, 255, .7);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.footer-links a:hover,
+.footer-topo:hover {
+    color: #fff;
+}
+
+.footer-icone {
+    color: #8fa8ff;
+}
+
+.footer-social {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgba(255, 255, 255, .08);
+    text-decoration: none;
+    transition: background-color .2s, transform .2s;
+}
+
+.footer-social:hover {
+    color: #fff;
+    background-color: var(--roxo);
+    transform: translateY(-2px);
+}
+
+.footer-linha {
+    border-color: rgba(255, 255, 255, .25);
+}
+
+/* ===================== CONTEÚDO ===================== */
+.banner-technexus {
+    background:
+        radial-gradient(circle at 15% 20%, rgba(13, 110, 253, .25), transparent 45%),
+        linear-gradient(135deg, var(--azul-marinho) 0%, #1b2a6b 55%, var(--roxo) 100%);
+}
+
+.card-hover,
+.card.shadow-sm {
+    transition: transform .2s, box-shadow .2s;
+}
+
+.card-hover:hover,
+.card.shadow-sm:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 .75rem 1.5rem rgba(9, 28, 82, .12) !important;
+}
+
+/* O formulário não deve "pular" ao passar o mouse */
+.form-card.card.shadow-sm:hover {
+    transform: none;
+}
+
+.nome-palestrante {
+    font-size: .72rem;
+    letter-spacing: .06em;
+}
+
+.mapa-iframe {
+    display: block;
+    width: 100%;
+    height: 450px;
+    border: 0;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--azul-marinho);
+}
+
+.nav-pills .nav-link {
+    color: var(--azul-marinho);
+}
+
+.banner-technexus .lead,
+.banner-technexus p {
+    color: rgba(255, 255, 255, .88);
+}
+
+.banner-technexus .container > p {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-primary {
+    background-color: var(--azul-marinho);
+    border-color: var(--azul-marinho);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: var(--roxo);
+    border-color: var(--roxo);
+}
+
+.btn-outline-primary {
+    color: var(--azul-marinho);
+    border-color: var(--azul-marinho);
+}
+
+.btn-outline-primary:hover {
+    background-color: var(--azul-marinho);
+    border-color: var(--azul-marinho);
+}
+
+/* Espaços reservados para imagens que ainda não foram substituídos */
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    color: #526078;
+    background-color: #eef1f8;
+    border: 1px dashed #aeb9d0;
+    border-radius: 8px;
+    min-height: 220px;
+    font-weight: 600;
+}
+
+.image-placeholder small {
+    margin-top: 8px;
+    color: var(--cinza);
+    font-weight: 400;
+    font-size: .8rem;
+}
+
+/* Imagem principal da Home */
+.home-image {
+    height: 320px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Imagens dos cards da Home */
+.topic-image {
+    height: 185px;
+    overflow: hidden;
+}
+
+/* Imagem da seção de experiência */
+.secondary-image {
+    height: 260px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Imagens da página Palestras */
+.lecture-image {
+    height: 270px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.lecture-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Imagem da página Saiba Mais */
+.form-image {
+    height: 230px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+/* Ajuste das imagens dentro dos espaços */
+.home-image img,
+.topic-image img,
+.secondary-image img,
+.lecture-image img,
+.form-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Formulário */
+.form-card {
+    border-radius: 10px;
+}
+
+.form-card .form-control,
+.form-card .form-select {
+    border-color: #ced4da;
+    border-radius: 6px;
+    padding: .65rem .8rem;
+}
+
+.form-card .form-control:focus,
+.form-card .form-select:focus {
+    border-color: var(--roxo);
+    box-shadow: 0 0 0 .15rem rgba(105, 80, 161, .15);
+}
+
+.form-card .form-check-input:checked {
+    background-color: var(--azul-marinho);
+    border-color: var(--azul-marinho);
+}
+
+/* Seção final da página */
+.cta-technexus {
+    background-color: #f4f5fa;
+}
+
+/* Ajustes para telas menores */
+@media (max-width: 767.98px) {
+    .banner-technexus {
+        padding-top: 2.5rem !important;
+        padding-bottom: 2.5rem !important;
+    }
+
+    .banner-technexus .display-5 {
+        font-size: 2rem;
+    }
+
+    .home-image,
+    .secondary-image,
+    .lecture-image,
+    .form-image {
+        height: 210px;
+    }
+
+    .topic-image {
+        height: 185px;
+    }
+
+    .mapa-iframe {
+        height: 320px;
+    }
+
+    /* Abas do mapa quebram linha no celular */
+    #mapaTabs {
+        flex-wrap: wrap;
+    }
+}
