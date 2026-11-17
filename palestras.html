@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNexus | Palestras</title>
+    <link rel="icon" type="image/png" href="img/logo.sem.texto.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-dark">
+    <!-- ===== MENU (igual em todas as páginas) ===== -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-technexus" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="img/logo.sem.texto.png" alt="" width="40" height="40" class="navbar-logo">
+                    <span class="fw-bold">TechNexus</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html"><i class="bi bi-building me-1"></i>Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link" href="programacao_dia.html"><i class="bi bi-calendar-event me-1"></i>Programação</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="palestras.html" aria-current="page"><i class="bi bi-mic me-1"></i>Palestras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="expositores.html"><i class="bi bi-people me-1"></i>Expositores</a></li>
+                    </ul>
+                    <a href="saiba_mais.html" class="btn btn-saiba-mais fw-semibold px-4"><i class="bi bi-envelope-paper me-2"></i>Saiba mais</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text-white py-5 mb-5 text-center shadow-sm banner-technexus">
+            <div class="container">
+                <h1 class="display-5 fw-bold mb-2">Nossas Palestras</h1>
+                <p class="mb-0">Três temas essenciais para entender os caminhos da tecnologia.</p>
+            </div>
+        </section>
+
+        <section class="container mb-5">
+            <div class="mb-4">
+                <h2 class="h3 fw-bold text-dark">Ideias, desafios e soluções para o futuro</h2>
+                <p class="text-body-secondary">Cada palestra apresenta um olhar diferente sobre as mudanças que já fazem parte do nosso cotidiano.</p>
+            </div>
+
+            <div class="row g-4 mb-4 align-items-center">
+                <div class="col-12 col-md-5">
+                    <div class="lecture-image">
+                        <img src="img/palestra.jpg" alt="Palestra sobre Inteligência Artificial">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7">
+                    <span class="badge bg-primary-subtle text-primary-emphasis mb-2">Inteligência Artificial</span>
+                    <h2 class="h4 fw-bold">O Futuro da IA e o Comportamento Humano</h2>
+                    <p class="fw-semibold text-body-secondary">Como os modelos generativos transformam a educação e o mercado de trabalho.</p>
+                    <p class="text-body-secondary">Uma conversa sobre o avanço da inteligência artificial, suas aplicações e os impactos que essas ferramentas podem trazer para a forma como aprendemos, trabalhamos e nos relacionamos.</p>
+                    <p class="mb-3"><strong>Palestrante:</strong> Levi Martinelo</p>
+                    <a href="expositores.html" class="btn btn-outline-primary btn-sm">Conheça o palestrante</a>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row g-4 mb-4 align-items-center">
+                <div class="col-12 col-md-5">
+                    <div class="lecture-image">
+                        <img src="img/palestra.jpg" alt="Palestra sobre Cibersegurança">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7">
+                    <span class="badge bg-info-subtle text-primary-emphasis mb-2">Cibersegurança</span>
+                    <h2 class="h4 fw-bold">Defesa Cibernética na Era das Ameaças Automatizadas</h2>
+                    <p class="fw-semibold text-body-secondary">Demonstração prática de proteção de dados e mitigação de riscos digitais.</p>
+                    <p class="text-body-secondary">Uma abordagem sobre segurança da informação, prevenção de ataques e estratégias para proteger pessoas e organizações em um cenário cada vez mais conectado.</p>
+                    <p class="mb-3"><strong>Palestrante:</strong> Aron Ribeiro</p>
+                    <a href="expositores.html" class="btn btn-outline-primary btn-sm">Conheça o palestrante</a>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <div class="row g-4 align-items-center">
+                <div class="col-12 col-md-5">
+                    <div class="lecture-image">
+                        <img src="img/palestra.jpg" alt="Palestra sobre Sustentabilidade">
+                    </div>
+                </div>
+                <div class="col-12 col-md-7">
+                    <span class="badge bg-success-subtle text-success-emphasis mb-2">Sustentabilidade &amp; Tech</span>
+                    <h2 class="h4 fw-bold">Tecnologia Verde e Transição Energética</h2>
+                    <p class="fw-semibold text-body-secondary">Inovações tecnológicas aplicadas à descarbonização e economia sustentável.</p>
+                    <p class="text-body-secondary">Um debate sobre como a inovação pode contribuir para reduzir impactos ambientais, apoiar a transição energética e desenvolver soluções mais sustentáveis.</p>
+                    <p class="mb-3"><strong>Palestrante:</strong> Carmen Sualinno</p>
+                    <a href="expositores.html" class="btn btn-outline-primary btn-sm">Conheça a palestrante</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="container mb-5">
+            <div class="text-center p-4 p-md-5 rounded-4 cta-technexus">
+                <h2 class="h4 fw-bold text-primary-emphasis">Saiba de mais palestras como essa</h2>
+                <p class="text-body-secondary mb-4">Inscreva-se para acompanhar este e os próximos eventos de tecnologia.</p>
+                <a href="saiba_mais.html" class="btn btn-primary btn-lg px-5 fw-semibold">Saiba mais</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="footer-technexus text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 g-lg-5">
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="d-inline-flex align-items-center gap-2 text-white text-decoration-none mb-3">
+                        <img src="img/logo.sem.texto.png" alt="" width="44" height="44" class="navbar-logo">
+                        <span class="h5 fw-bold mb-0">TechNexus</span>
+                    </a>
+                    <p class="footer-texto small mb-4">Conectando estudantes, pesquisadores, desenvolvedores e profissionais em encontros sobre Inteligência Artificial, Cibersegurança e Sustentabilidade Digital.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="footer-social" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h2 class="footer-titulo">Navegação</h2>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="programacao_dia.html">Programação</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h2 class="footer-titulo">Evento</h2>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li><a href="palestras.html">Palestras</a></li>
+                        <li><a href="expositores.html">Expositores</a></li>
+                        <li><a href="saiba_mais.html">Saiba mais</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4">
+                    <h2 class="footer-titulo">Local e horário</h2>
+                    <ul class="list-unstyled footer-texto small mb-4">
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685 — Parque Farroupilha, Porto Alegre - RS</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 08h30 às 17h00</span></li>
+                    </ul>
+                    <a href="saiba_mais.html" class="btn btn-saiba-mais btn-sm fw-semibold px-3">Quero receber novidades</a>
+                </div>
+            </div>
+
+            <hr class="footer-linha my-4">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small footer-texto text-center">
+                <span>&copy; 2026 TechNexus Conferências Brasil. Todos os direitos reservados.</span>
+                <a href="#" class="footer-topo">Voltar ao topo <i class="bi bi-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechNexus | Programação do Dia</title>
+    <link rel="icon" type="image/png" href="img/logo.sem.texto.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-yEPZ7jP9S0QKiUQ0m3jjsO4ProIW7wvR9gXkI7JOGa2XVsw53Yke2bsdkBbjmmiX" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white text-dark">
+
+    <!-- ===== MENU (igual em todas as páginas) ===== -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-technexus" aria-label="Menu principal">
+            <div class="container">
+                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+                    <img src="img/logo.sem.texto.png" alt="" width="40" height="40" class="navbar-logo">
+                    <span class="fw-bold">TechNexus</span>
+                </a>
+                <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="menuPrincipal">
+                    <ul class="navbar-nav mx-auto mb-3 mb-lg-0 gap-lg-1">
+                        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house-door me-1"></i>Início</a></li>
+                        <li class="nav-item"><a class="nav-link" href="sobre.html"><i class="bi bi-building me-1"></i>Sobre</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="programacao_dia.html" aria-current="page"><i class="bi bi-calendar-event me-1"></i>Programação</a></li>
+                        <li class="nav-item"><a class="nav-link" href="palestras.html"><i class="bi bi-mic me-1"></i>Palestras</a></li>
+                        <li class="nav-item"><a class="nav-link" href="expositores.html"><i class="bi bi-people me-1"></i>Expositores</a></li>
+                    </ul>
+                    <a href="saiba_mais.html" class="btn btn-saiba-mais fw-semibold px-4"><i class="bi bi-envelope-paper me-2"></i>Saiba mais</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="text-white py-5 mb-5 text-center shadow-sm banner-technexus">
+            <div class="container">
+                <h1 class="display-5 fw-bold mb-2">Programação do Dia</h1>
+            </div>
+        </section>
+
+        <!-- Cronograma do Evento -->
+        <section class="container py-5">
+
+            <div class="row align-items-end border-bottom border-dark border-2 pb-4 mb-2">
+                <div class="col-md-8">
+                    <h2 class="display-6 fw-bold text-dark mb-0">Programação do Evento</h2>
+                </div>
+            </div>
+
+            <div class="divide-y">
+                <div class="row py-4 border-bottom align-items-baseline bg-body-tertiary rounded-3 px-2 mx-0">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                        <span class="font-monospace fw-semibold text-body-secondary fs-5">08:30 — 09:30</span>
+                    </div>
+                    <div class="col-md-6 mb-2 mb-md-0">
+                        <h3 class="h5 fw-bold text-dark mb-1">Boas Vindas</h3>
+                        <p class="text-body-secondary mb-0">
+                        Retirada de crachás, entrega do kit do participante e café de boas-vindas.
+                        </p>
+                    </div>
+                    <div class="col-md-3 text-md-end">
+                        <span class="text-body-secondary small fw-medium">Hall Principal</span>
+                    </div>
+                </div>
+
+                <!-- Palestra 1 -->
+                <div class="row py-4 border-bottom align-items-baseline">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                        <span class="font-monospace fw-semibold text-primary fs-5">09:30 — 11:00</span>
+                        <div class="text-uppercase text-body-secondary fw-semibold mt-1 nome-palestrante">
+                        Levi Martinelo
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2 mb-md-0">
+                        <h3 class="h5 fw-bold text-dark mb-1">O Futuro da IA e o Comportamento Humano</h3>
+                        <p class="text-body-secondary mb-2">
+                        Como os modelos generativos transformam a educação e o mercado de trabalho.
+                        </p>
+                        <p class="small text-dark fw-semibold mb-0"> Inteligência Artificial </p>
+                    </div>
+                    <div class="col-md-3 text-md-end">
+                        <span class="text-body-secondary small fw-medium">Auditório • Ala A</span>
+                    </div>
+                </div>
+
+                <!-- Intervalo-->
+                <div class="row py-4 border-bottom align-items-baseline bg-body-tertiary rounded-3 px-2 mx-0">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                        <span class="font-monospace fw-semibold text-body-secondary fs-5">11:00 — 13:30</span>
+                    </div>
+                    <div class="col-md-6 mb-2 mb-md-0">
+                        <h3 class="h5 fw-bold text-dark mb-1">Intervalo para Almoço & Feira de Startups</h3>
+                        <p class="text-body-secondary mb-0">
+                        Food trucks na área externa e estandes interativos de empresas parceiras.
+                        </p>
+                    </div>
+                    <div class="col-md-3 text-md-end">
+                        <span class="text-body-secondary small fw-medium">Praça Tech & Feira do TechNexus</span>
+                    </div>
+                </div>
+
+                <!-- Palestra 2 -->
+                <div class="row py-4 border-bottom align-items-baseline">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                        <span class="font-monospace fw-semibold text-primary fs-5">13:30 — 15:00</span>
+                        <div class="text-uppercase text-body-secondary fw-semibold mt-1 nome-palestrante">
+                        Aron Ribeiro
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2 mb-md-0">
+                        <h3 class="h5 fw-bold text-dark mb-1">Defesa Cibernética na Era das Ameaças Automatizadas</h3>
+                        <p class="text-body-secondary mb-2">
+                        Demonstração prática de proteção de dados e mitigação de riscos digitais.
+                        </p>
+                        <p class="small text-dark fw-semibold mb-0">
+                        Cibersegurança
+                        </p>
+                    </div>
+                    <div class="col-md-3 text-md-end">
+                        <span class="text-body-secondary small fw-medium">Arena A -- fora do prédio </span>
+                    </div>
+                </div>
+
+                <!-- Palestra 3 -->
+                <div class="row py-4 border-bottom align-items-baseline">
+                    <div class="col-md-3 mb-2 mb-md-0">
+                        <span class="font-monospace fw-semibold text-primary fs-5">15:30 — 17:00</span>
+                        <div class="text-uppercase text-body-secondary fw-semibold mt-1 nome-palestrante">
+                        Carmen Sualinno
+                        </div>
+                    </div>
+                    <div class="col-md-6 mb-2 mb-md-0">
+                        <h3 class="h5 fw-bold text-dark mb-1">Tecnologia Verde e Transição Energética</h3>
+                        <p class="text-body-secondary mb-2">
+                        Inovações tecnológicas aplicadas à descarbonização e economia sustentável.
+                        </p>
+                        <p class="small text-dark fw-semibold mb-0">
+                        Sustentabilidade & Tech
+                        </p>
+                    </div>
+                    <div class="col-md-3 text-md-end">
+                        <span class="text-body-secondary small fw-medium">Auditório • Ala A</span>
+                    </div>
+                </div>
+
+            </div>
+            </section>
+
+        <!-- Seção 2: Mapa Interativo -->
+        <section class="container mb-5 pt-3">
+
+            <div class="mb-4">
+                <h2 class="h3 fw-bold text-dark mb-1">Localização - Informações</h2>
+            </div>
+
+            <div class="card shadow-sm border-primary-subtle">
+                <div class="card-header bg-light p-3">
+                    <ul class="nav nav-pills gap-2" id="mapaTabs" role="tablist">
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active fw-semibold"
+                                id="levi-tab"
+                                data-bs-toggle="pill"
+                                data-bs-target="#local-levi"
+                                type="button"
+                                role="tab"
+                                aria-controls="local-levi"
+                                aria-selected="true">
+                                Levi Martinelo
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-semibold" id="aron-tab" data-bs-toggle="pill" data-bs-target="#local-aron" type="button" role="tab">
+                                Aron Ribeiro
+                            </button>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link fw-semibold" id="carmen-tab" data-bs-toggle="pill" data-bs-target="#local-carmen" type="button" role="tab">
+                                Carmen Sualinno
+                            </button>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="card-body p-3 p-md-4">
+                    <div class="tab-content" id="mapaTabsContent">
+
+                        <!-- PALESTRA LEVI -->
+                        <div class="tab-pane fade show active" id="local-levi" role="tabpanel">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-12 col-lg-7">
+                                    <div class="rounded overflow-hidden border shadow-sm">
+                                        <iframe
+                                            src="https://umap.hotosm.org/pt-br/map/mapa_technexus_8618?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"
+                                            class="mapa-iframe" title="Mapa do evento"
+                                            allowfullscreen
+                                            loading="lazy">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-5">
+
+                                    <span class="badge bg-primary-subtle text-primary">Inteligência Artificial</span>
+                                    <h3 class="h4 fw-bold">Levi Martinelo</h3>
+                                    <h4 class="h5 mt-3">O Futuro da IA e o Comportamento Humano</h4>
+                                    <p class="text-body-secondary small"><i class="bi bi-clock"></i>09h30 às 11h00</p>
+                                    <hr>
+                                    <h5 class="fw-bold fs-6"> <i class="bi bi-geo-alt-fill text-primary"></i> Local da palestra </h5>
+                                    <p class="mb-2"> <strong>Auditório Araújo Vianna</strong> </p>
+                                    <p class="text-body-secondary small"> Av. Osvaldo Aranha — Parque Farroupilha, 685, Porto Alegre - RS. </p>
+                                    <ul class="list-group list-group-flush small">
+                                        <li class="list-group-item px-0"> <strong>Entrada:</strong> Acesso pela Avenida Osvaldo Aranha. </li>
+                                        <li class="list-group-item px-0"> <strong>Dica:</strong> Chegue com antecedência para localizar seu assento. </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- PALESTRA ARON -->
+                        <div class="tab-pane fade" id="local-aron" role="tabpanel">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-12 col-lg-7">
+                                    <div class="rounded overflow-hidden border shadow-sm">
+                                        <iframe
+                                            src="https://umap.hotosm.org/pt-br/map/mapa_technexus_8618?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"
+                                            class="mapa-iframe" title="Mapa do evento"
+                                            allowfullscreen
+                                            loading="lazy">
+                                        </iframe>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-lg-5">
+                                    <span class="badge bg-danger-subtle text-danger">Cibersegurança</span>
+                                    <h3 class="h4 fw-bold">Aron Ribeiro</h3>
+                                    <h4 class="h5 mt-3">Defesa Cibernética na Era das Ameaças Automatizadas </h4>
+
+                                    <p class="text-body-secondary small"> <i class="bi bi-clock"></i> 13h30 às 15h00 </p>
+
+                                    <hr>
+
+                                    <h5 class="fw-bold fs-6"> <i class="bi bi-geo-alt-fill text-danger"></i> Local da palestra</h5>
+                                    <p class="mb-2"> <strong>Arena Cyber (Ala B)</strong></p>
+                                    <p class="text-body-secondary small">Confira a localização da Arena Cyber no mapa ao lado.</p>
+                                    <ul class="list-group list-group-flush small">
+                                        <li class="list-group-item px-0"><strong>Entrada:</strong>Consulte o mapa para encontrar o acesso mais próximo.</li>
+                                        <li class="list-group-item px-0"><strong>Dica:</strong> Organize seu deslocamento para não perder o início da palestra. </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- PALESTRA CARMEN -->
+                        <div class="tab-pane fade" id="local-carmen" role="tabpanel">
+
+                            <div class="row g-4 align-items-center">
+                                <div class="col-12 col-lg-7">
+                                    <div class="rounded overflow-hidden border shadow-sm">
+                                        <iframe
+                                            src="https://umap.hotosm.org/pt-br/map/mapa_technexus_8618?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"
+                                            class="mapa-iframe" title="Mapa do evento"
+                                            allowfullscreen
+                                            loading="lazy">
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-5">
+                                    <span class="badge bg-success-subtle text-success">Sustentabilidade </span>
+                                    <h3 class="h4 fw-bold">Carmen Sualinno</h3>
+                                    <h4 class="h5 mt-3">Tecnologia Verde e Transição Energética</h4>
+                                    <p class="text-body-secondary small"><i class="bi bi-clock"></i>15h30 às 17h00</p>
+                                    <h5 class="fw-bold fs-6"><i class="bi bi-geo-alt-fill text-success"></i>Local da palestra</h5>
+                                    <p class="mb-2"> <strong>Auditório Gaia (2º Andar)</strong></p>
+                                    <p class="text-body-secondary small">Confira a localização do Auditório Gaia no mapa ao lado.</p>
+
+                                    <ul class="list-group list-group-flush small">
+                                        <li class="list-group-item px-0">
+                                            <strong>Entrada:</strong>
+                                            Consulte o mapa para encontrar o acesso ao auditório.
+                                        </li>
+                                        <li class="list-group-item px-0">
+                                            <strong>Dica:</strong>
+                                            Programe-se para chegar antes do início da apresentação.
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="container mb-5">
+            <div class="text-center mt-5 p-4 p-md-5 rounded-4 cta-technexus">
+                <h4 class="fw-bold text-primary-emphasis">Saiba de mais palestras como essa</h4>
+                <p class="text-body-secondary mb-4">Inscreva-se para acompanhar este e os próximos eventos de tecnologia.</p>
+                <a href="saiba_mais.html" class="btn btn-primary btn-lg px-5 fw-semibold shadow-sm">Saiba mais</a>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <footer class="footer-technexus text-white pt-5 pb-4">
+        <div class="container">
+            <div class="row g-4 g-lg-5">
+                <div class="col-12 col-lg-4">
+                    <a href="index.html" class="d-inline-flex align-items-center gap-2 text-white text-decoration-none mb-3">
+                        <img src="img/logo.sem.texto.png" alt="" width="44" height="44" class="navbar-logo">
+                        <span class="h5 fw-bold mb-0">TechNexus</span>
+                    </a>
+                    <p class="footer-texto small mb-4">Conectando estudantes, pesquisadores, desenvolvedores e profissionais em encontros sobre Inteligência Artificial, Cibersegurança e Sustentabilidade Digital.</p>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                        <a href="#" class="footer-social" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                        <a href="#" class="footer-social" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                    </div>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h2 class="footer-titulo">Navegação</h2>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="sobre.html">Sobre</a></li>
+                        <li><a href="programacao_dia.html">Programação</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-4 col-lg-2">
+                    <h2 class="footer-titulo">Evento</h2>
+                    <ul class="list-unstyled footer-links mb-0">
+                        <li><a href="palestras.html">Palestras</a></li>
+                        <li><a href="expositores.html">Expositores</a></li>
+                        <li><a href="saiba_mais.html">Saiba mais</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-12 col-md-4 col-lg-4">
+                    <h2 class="footer-titulo">Local e horário</h2>
+                    <ul class="list-unstyled footer-texto small mb-4">
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685 — Parque Farroupilha, Porto Alegre - RS</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 08h30 às 17h00</span></li>
+                    </ul>
+                    <a href="saiba_mais.html" class="btn btn-saiba-mais btn-sm fw-semibold px-3">Quero receber novidades</a>
+                </div>
+            </div>
+
+            <hr class="footer-linha my-4">
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2 small footer-texto text-center">
+                <span>&copy; 2026 TechNexus Conferências Brasil. Todos os direitos reservados.</span>
+                <a href="#" class="footer-topo">Voltar ao topo <i class="bi bi-arrow-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+</body>
+</html>
