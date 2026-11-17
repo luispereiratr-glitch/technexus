@@ -1,0 +1,64 @@
+TECHNEXUS
+
+____________ LÓGICA DAS PÁGINAS ___________________________________________________________________________________________________________
+
+O professor pediu para ter 6 páginas complexas, ou seja:
+    1°- página "programação do dia": Vai ter um mapa mostrando o local e um cronograma falando
+        o que vai ter em cada dia e em que horário.
+    2°- página "sobre": fala sobre a organizadora desse evento como funciona e tals
+    3°- Pagina "palestras": Fala sobre as três palestras que vão ser expostas no dia
+    4°- página "expositores": Fala sobre os palestrantes (quem são e um tipo de bibliografia)
+    5°- página "saiba mais": Vai ser um formulário para fazer uma inscrição para saber mais eventos 
+        como esse no futuro
+    6°- página inicial "home": (último a ser feito): resumo de todas as outras páginas
+
+
+- Todas as páginas terão que ter um botão de "saiba mais" que leva para o formulário de inscrição.
+
+- Paleta de cores: tons de azul e roxo e a cor básica é branca.
+
+- Banco de dados: O primeiro que for fazer a parte do PHP cria o banco de dados.
+
+- Códigos: sempre que fizer algo, mande no grupo o arquivo atualizado em formato ZIP.
+
+- Seria bom cumprirmos o prazo de dias para facilitar para a próxima pessoa possa mexer no código sem atrapalhar 
+a última pessoa que usou... 
+
+
+____________ O QUE CADA UM VAI FAZER _______________________________________________________________________________________________________
+Semana 1 – Desenvolvimento do frontend e estrutura PHP......................................................................................
+
+    Integrante	      .  Responsabilidades
+
+-   Pessoa 1 dom-seg  .  Desenvolver as páginas/seções 1, 2 e 3, incluindo HTML, CSS e responsividade.
+-   Pessoa 2 ter-qua  .  Desenvolver as páginas/seções 4, 5 e 6, incluindo HTML, CSS e responsividade.
+-   Pessoa 3 qui-sex  .  Preparar estrutura de pastas, configurar PHP e MySQL, converter páginas para PHP e criar includes de cabeçalho, menu e rodapé.
+
+Entrega: site com as 6 páginas/seções funcionando e estrutura PHP organizada.
+
+Semana 2 – Backend, login e painel administrativo............................................................................................
+
+    Integrante	      .  Responsabilidades
+  
+-   Pessoa 1 dom-seg  . Criar formulário de contato e desenvolver a interface da página de login.
+-   Pessoa 2 ter-qua  . Criar banco de dados, conexão PHP, cadastro inicial de administrador e autenticação.
+-   Pessoa 3 qui-sex  . Desenvolver painel administrativo, proteção por sessão e exibição dos dados do usuário logado.
+
+Entrega: login funcionando e painel administrativo protegido.
+
+Semana 3 – CRUD, conteúdo dinâmico e finalização.............................................................................................
+
+    Integrante	        Responsabilidades
+
+-   Pessoa 1 dom-seg 	Desenvolver cadastro, edição e exclusão de usuários.
+-   Pessoa 2 ter-qua	Desenvolver upload de fotos dos usuários e edição de pelo menos 3 conteúdos do site.
+-   Pessoa 3 qui-sex	Salvar mensagens de contato no banco, criar área de visualização, integrar funcionalidades e preparar a entrega final.
+
+Entrega: todas as funcionalidades funcionando, ZIP, SQL e gravação.
+
+
+____________ QUEM É CADA UM _________________________________________________________________________________________________________________
+
+    MARI:   ficou com a 1° pessoa, ou seja, com dom e seg
+    ISA:    ficou com a 2° pessoa, ou seja, com ter e qua
+    LUÍS:   ficou com a 3° pessoa, ou seja, com qui e sex
