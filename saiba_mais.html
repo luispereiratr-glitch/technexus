@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white text-dark">
+<body>
     <!-- ===== MENU (igual em todas as páginas) ===== -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-technexus" aria-label="Menu principal">
@@ -39,98 +39,103 @@
     </header>
 
     <main>
-        <section class="text-white py-5 mb-5 text-center shadow-sm banner-technexus">
+        <section class="banner-technexus text-center">
             <div class="container">
-                <h1 class="display-5 fw-bold mb-2">Saiba Mais</h1>
-                <p class="mb-0">Tire suas dúvidas, envie sugestões ou fale diretamente com a organização da TechNexus.</p>
+                <h1 class="display-5">Saiba mais</h1>
+                <p>Tire dúvidas sobre esta edição ou cadastre seu e-mail para saber das próximas.</p>
             </div>
         </section>
 
-        <section class="container mb-5">
-            <div class="row g-4 align-items-start">
-                <div class="col-12 col-lg-5">
-                    <h2 class="h3 fw-bold text-dark mb-3">Fale com a gente</h2>
-                    <p class="text-body-secondary">Ficou com alguma dúvida sobre o evento, os ingressos, o certificado ou a acessibilidade do local? Envie sua mensagem pelo formulário e a equipe da TechNexus responde por e-mail.</p>
+        <section class="py-5">
+            <div class="container py-lg-4">
+                <div class="row g-5">
+                    <!-- Informações -->
+                    <div class="col-12 col-lg-5 order-2 order-lg-1">
+                        <div class="ratio ratio-3x2 rounded-3 overflow-hidden mb-4">
+                            <img src="img/image.png" class="object-fit-cover" alt="Palestrante apresentando conteúdo em uma tela" loading="lazy">
+                        </div>
 
-                    <ul class="list-unstyled mt-4 mb-4">
-                        <li class="d-flex gap-3 mb-3">
-                            <i class="bi bi-geo-alt-fill fs-4 text-primary"></i>
-                            <div>
-                                <span class="d-block fw-semibold">Auditório Araújo Vianna</span>
-                                <span class="small text-body-secondary">Av. Osvaldo Aranha, 685 — Parque Farroupilha, Porto Alegre - RS</span>
-                            </div>
-                        </li>
-                        <li class="d-flex gap-3 mb-3">
-                            <i class="bi bi-clock-fill fs-4 text-primary"></i>
-                            <div>
-                                <span class="d-block fw-semibold">Das 08h30 às 17h00</span>
-                                <span class="small text-body-secondary">Horário do evento</span>
-                            </div>
-                        </li>
-                        <li class="d-flex gap-3">
-                            <i class="bi bi-ticket-perforated-fill fs-4 text-primary"></i>
-                            <div>
-                                <span class="d-block fw-semibold">Dúvidas sobre ingressos?</span>
-                                <a href="comprar_ingresso.html#duvidas" class="small">Veja as perguntas frequentes</a>
-                            </div>
-                        </li>
-                    </ul>
+                        <h2 class="h4 fw-bold mb-2">Fale com a organização</h2>
+                        <p class="text-body-secondary mb-4">A equipe da TechNexus responde todas as mensagens por e-mail. Antes de escrever, vale conferir os links abaixo: muitas dúvidas já estão respondidas neles.</p>
 
-                    <div class="form-image">
-                        <img src="img/palestra.jpg" alt="Participantes em um evento da TechNexus">
+                        <ul class="list-group list-group-flush border-top border-bottom">
+                            <li class="list-group-item bg-transparent px-0 py-3">
+                                <div>
+                                    <strong class="d-block">Auditório Araújo Vianna</strong>
+                                    <span class="small text-body-secondary">Av. Osvaldo Aranha, 685, Parque Farroupilha, Porto Alegre (RS)</span>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-transparent px-0 py-3">
+                                <div>
+                                    <strong class="d-block">Das 8h30 às 17h</strong>
+                                    <a href="programacao_dia.html" class="small">Ver a programação do dia</a>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-transparent px-0 py-3">
+                                <div>
+                                    <strong class="d-block">Dúvidas sobre ingressos</strong>
+                                    <a href="comprar_ingresso.html#duvidas" class="small">Ver as perguntas frequentes</a>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                </div>
 
-                <div class="col-12 col-lg-7">
-                    <div class="card shadow-sm border-0 form-card">
-                        <div class="card-body p-4 p-md-5">
-                            <h2 class="h4 fw-bold mb-2">Envie sua dúvida</h2>
-                            <p class="text-body-secondary small mb-4">Os campos marcados com * são obrigatórios.</p>
+                    <!-- Formulário -->
+                    <div class="col-12 col-lg-7 order-1 order-lg-2">
+                        <div class="card">
+                            <div class="card-body p-4 p-md-5">
+                                <h2 class="h4 fw-bold mb-1">Envie sua mensagem</h2>
+                                <p class="text-body-secondary small mb-4">Os campos marcados com * são obrigatórios.</p>
 
-                            <form action="#" method="post">
-                                <div class="mb-3">
-                                    <label for="nome" class="form-label fw-semibold">Nome completo *</label>
-                                    <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" autocapitalize="words" required>
-                                </div>
-
-                                <div class="row g-3">
-                                    <div class="col-12 col-md-6">
-                                        <label for="email" class="form-label fw-semibold">E-mail *</label>
-                                        <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
-                                        <div class="form-text">A resposta será enviada para este e-mail.</div>
+                                <form action="#" method="post">
+                                    <div class="row g-3">
+                                        <div class="col-12">
+                                            <label for="nome" class="form-label fw-semibold">Nome completo *</label>
+                                            <input type="text" class="form-control" id="nome" name="nome" placeholder="Digite seu nome" autocomplete="name" autocapitalize="words" required>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="email" class="form-label fw-semibold">E-mail *</label>
+                                            <input type="email" class="form-control" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" inputmode="email" autocapitalize="off" spellcheck="false" required>
+                                            <div class="form-text">A resposta será enviada para este e-mail.</div>
+                                        </div>
+                                        <div class="col-12 col-md-6">
+                                            <label for="telefone" class="form-label fw-semibold">Telefone</label>
+                                            <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel-national" inputmode="tel" data-mascara="telefone" maxlength="15">
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="assunto" class="form-label fw-semibold">Assunto *</label>
+                                            <select class="form-select" id="assunto" name="assunto" autocomplete="off" required>
+                                                <option value="" selected>Selecione o assunto</option>
+                                                <option value="Dúvida sobre o evento">Dúvida sobre o evento</option>
+                                                <option value="Ingressos e pagamento">Ingressos e pagamento</option>
+                                                <option value="Certificado">Certificado</option>
+                                                <option value="Palestras e palestrantes">Palestras e palestrantes</option>
+                                                <option value="Acessibilidade">Acessibilidade</option>
+                                                <option value="Próximos eventos">Quero saber dos próximos eventos</option>
+                                                <option value="Sugestão ou elogio">Sugestão ou elogio</option>
+                                                <option value="Outro assunto">Outro assunto</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-12">
+                                            <label for="mensagem" class="form-label fw-semibold">Mensagem *</label>
+                                            <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua dúvida ou mensagem..." autocomplete="off" minlength="10" required></textarea>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form-check mb-2">
+                                                <input class="form-check-input" type="checkbox" value="sim" id="novidades" name="novidades">
+                                                <label class="form-check-label small text-body-secondary" for="novidades">Quero receber por e-mail as novidades das próximas edições.</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" value="sim" id="consentimento" name="consentimento" required>
+                                                <label class="form-check-label small text-body-secondary" for="consentimento">Autorizo a TechNexus a usar meus dados para responder esta mensagem. *</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 pt-2">
+                                            <button type="submit" class="btn btn-primary btn-lg w-100"><i class="bi bi-send me-2"></i>Enviar mensagem</button>
+                                        </div>
                                     </div>
-                                    <div class="col-12 col-md-6">
-                                        <label for="telefone" class="form-label fw-semibold">Telefone</label>
-                                        <input type="tel" class="form-control" id="telefone" name="telefone" placeholder="(00) 00000-0000" autocomplete="tel-national" inputmode="tel" data-mascara="telefone" maxlength="15">
-                                    </div>
-                                </div>
-
-                                <div class="my-3">
-                                    <label for="assunto" class="form-label fw-semibold">Assunto *</label>
-                                    <select class="form-select" id="assunto" name="assunto" autocomplete="off" required>
-                                        <option value="" selected>Selecione o assunto</option>
-                                        <option value="Dúvida sobre o evento">Dúvida sobre o evento</option>
-                                        <option value="Ingressos e pagamento">Ingressos e pagamento</option>
-                                        <option value="Certificado">Certificado</option>
-                                        <option value="Palestras e palestrantes">Palestras e palestrantes</option>
-                                        <option value="Acessibilidade">Acessibilidade</option>
-                                        <option value="Sugestão ou elogio">Sugestão ou elogio</option>
-                                        <option value="Outro assunto">Outro assunto</option>
-                                    </select>
-                                </div>
-
-                                <div class="mb-3">
-                                    <label for="mensagem" class="form-label fw-semibold">Mensagem *</label>
-                                    <textarea class="form-control" id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua dúvida ou mensagem..." autocomplete="off" minlength="10" required></textarea>
-                                </div>
-
-                                <div class="form-check mb-4">
-                                    <input class="form-check-input" type="checkbox" value="sim" id="consentimento" name="consentimento" required>
-                                    <label class="form-check-label small text-body-secondary" for="consentimento">Autorizo a TechNexus a usar meus dados para responder esta mensagem. *</label>
-                                </div>
-
-                                <button type="submit" class="btn btn-primary btn-lg w-100 fw-semibold"><i class="bi bi-send me-2"></i>Enviar mensagem</button>
-                            </form>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -146,7 +151,7 @@
                     <a href="index.html" class="d-inline-block mb-3">
                         <img src="img/logo.horizontal.png" alt="TechNexus" width="200" height="48">
                     </a>
-                    <p class="footer-texto small mb-4">Conectando estudantes, pesquisadores, desenvolvedores e profissionais em encontros sobre Inteligência Artificial, Cibersegurança e Sustentabilidade Digital.</p>
+                    <p class="footer-texto small mb-4">Palestras sobre inteligência artificial, cibersegurança e sustentabilidade digital em Porto Alegre. Organização: TechNexus Conferências Brasil, desde 2018.</p>
                     <div class="d-flex gap-2">
                         <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -176,12 +181,12 @@
                 </div>
 
                 <div class="col-12 col-md-4 col-lg-4">
-                    <h2 class="footer-titulo">Local e horário</h2>
+                    <h2 class="footer-titulo">Onde e quando</h2>
                     <ul class="list-unstyled footer-texto small mb-4">
-                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685 — Parque Farroupilha, Porto Alegre - RS</span></li>
-                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 08h30 às 17h00</span></li>
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685, Parque Farroupilha, Porto Alegre (RS)</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 8h30 às 17h</span></li>
                     </ul>
-                    <a href="saiba_mais.html" class="btn btn-saiba-mais btn-sm fw-semibold px-3">Tire suas dúvidas</a>
+                    <a href="programacao_dia.html#localizacao" class="footer-topo small fw-semibold">Como chegar <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -193,6 +198,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== BOTÃO FIXO DO WHATSAPP =====
+         Para abrir direto na conversa da organização, troque o link por https://wa.me/55DDDNUMERO -->
+    <a href="https://wa.me/?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20TechNexus." class="btn btn-whatsapp rounded-circle position-fixed bottom-0 end-0 m-3 m-md-4 z-3 d-inline-flex align-items-center justify-content-center" target="_blank" rel="noopener" aria-label="Falar com a TechNexus pelo WhatsApp" title="Falar pelo WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
     <script src="js/formularios.js"></script>

@@ -38,14 +38,27 @@
         ativar(Math.floor(progresso * total));
     }
 
-    // Clicar no indicador rola até o palestrante escolhido
+    // Rola a página até o slide escolhido (usado pelo indicador e pelos links com #)
+    function irPara(indice, comportamento) {
+        const percurso = secao.offsetHeight - window.innerHeight;
+        const alvo = secao.getBoundingClientRect().top + window.scrollY + percurso * (indice + 0.5) / total;
+        window.scrollTo({ top: alvo, behavior: comportamento });
+    }
+
     pontos.forEach(ponto => {
-        ponto.addEventListener("click", () => {
-            const percurso = secao.offsetHeight - window.innerHeight;
-            const alvo = secao.offsetTop + percurso * (Number(ponto.dataset.irPara) + 0.5) / total;
-            window.scrollTo({ top: alvo, behavior: "smooth" });
-        });
+        ponto.addEventListener("click", () => irPara(Number(ponto.dataset.irPara), "smooth"));
     });
+
+    // Links como "palestras.html#palestra-ia" abrem direto no slide certo
+    function abrirPeloEndereco() {
+        if (!modoRolagem.matches || !location.hash) return;
+        const indice = slides.findIndex(slide => "#" + slide.id === location.hash);
+        if (indice < 0) return;
+        // O salto nativo do navegador pode rolar o "palco" por dentro; volta ao normal
+        secao.querySelector(".palestrantes-palco").scrollTop = 0;
+        irPara(indice, "instant"); // "auto" herdaria o scroll-behavior: smooth do Bootstrap
+        aoRolar();
+    }
 
     function configurar() {
         secao.classList.toggle("modo-rolagem", modoRolagem.matches);
@@ -66,6 +79,10 @@
 
     window.addEventListener("scroll", aoRolar, { passive: true });
     window.addEventListener("resize", aoRolar);
+    window.addEventListener("hashchange", abrirPeloEndereco);
     modoRolagem.addEventListener("change", configurar);
     configurar();
+    // Espera o layout final (imagens/fontes) antes de pular para o slide do endereço
+    // (o pequeno atraso deixa o navegador terminar o salto nativo para o #)
+    window.addEventListener("load", () => setTimeout(abrirPeloEndereco, 50));
 })();

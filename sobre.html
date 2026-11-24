@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white text-dark">
+<body>
 
     <!-- ===== MENU (igual em todas as páginas) ===== -->
     <header class="sticky-top">
@@ -40,98 +40,95 @@
     </header>
 
     <main>
-        <section class="text-white py-5 mb-5 text-center shadow-sm banner-technexus">
+        <section class="banner-technexus text-center">
             <div class="container">
-                <h1 class="display-5 fw-bold mb-2">Sobre a Organização</h1>      
+                <h1 class="display-5">Sobre a TechNexus</h1>
+                <p>Quem organiza o evento, para quem ele é pensado e como funciona o dia.</p>
             </div>
         </section>
 
-        <section class="container mb-5">
-            <div class="row g-4 align-items-center mb-5">
-                <div class="col-12 col-lg-6">
-                    <h2 class="h3 fw-bold text-dark mb-3">TechNexus Conferências Brasil</h2>
-                    <p class="text-body-secondary">
-                        A <strong>TechNexus Conferências</strong> é uma iniciativa dedicada a conectar estudantes, pesquisadores, desenvolvedores e líderes do mercado de tecnologia em encontros presenciais de alto nível.
-                    </p>
-                    <p class="text-body-secondary mb-0">
-                        Desde 2018, promovemos debates práticos sobre Inteligência Artificial, Cibersegurança e Sustentabilidade Digital, democratizando o acesso ao conhecimento com linguagem direta e aplicável ao mercado de trabalho.
-                    </p>
+        <!-- ===== QUEM ORGANIZA ===== -->
+        <section class="py-5">
+            <div class="container py-lg-4">
+                <div class="row g-5">
+                    <div class="col-12 col-lg-5">
+                        <h2 class="display-6 fw-bold mb-0">TechNexus Conferências Brasil</h2>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <p class="fs-5 mb-3">Organizamos encontros presenciais que aproximam estudantes, pesquisadores, desenvolvedores e profissionais do mercado de tecnologia.</p>
+                        <p class="text-body-secondary mb-0">Desde 2018, cada edição reúne especialistas para falar de inteligência artificial, cibersegurança e sustentabilidade digital numa linguagem direta, pensada para quem quer aplicar o que ouviu nos estudos e no trabalho.</p>
+                    </div>
                 </div>
 
-                <div class="col-12 col-lg-6">
-                    <div class="row g-3 text-center">
-                        <div class="col-6">
-                            <div class="p-4 rounded-4 border border-primary-subtle">
-                                <h3 class="display-6 fw-bold mb-1">+12 mil</h3>
-                                <p class="small text-dark fw-semibold mb-0">Participantes impactados</p>
-                            </div>
+                <div class="row row-cols-2 row-cols-lg-4 g-4 mt-4 mt-lg-5">
+                    <div class="col"><div class="h-100 border-start border-primary border-2 ps-3">
+                        <p class="display-6 fw-bold text-primary mb-1">+12 mil</p>
+                        <p class="text-body-secondary mb-0">participantes desde a primeira edição</p>
+                    </div></div>
+                    <div class="col"><div class="h-100 border-start border-primary border-2 ps-3">
+                        <p class="display-6 fw-bold text-primary mb-1">18</p>
+                        <p class="text-body-secondary mb-0">edições realizadas</p>
+                    </div></div>
+                    <div class="col"><div class="h-100 border-start border-primary border-2 ps-3">
+                        <p class="display-6 fw-bold text-primary mb-1">3 palestras</p>
+                        <p class="text-body-secondary mb-0">IA, cibersegurança e sustentabilidade digital</p>
+                    </div></div>
+                    <div class="col"><div class="h-100 border-start border-primary border-2 ps-3">
+                        <p class="display-6 fw-bold text-primary mb-1">8 horas</p>
+                        <p class="text-body-secondary mb-0">de certificado digital, incluído no ingresso</p>
+                    </div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== COMO FUNCIONA ===== -->
+        <section class="py-5 bg-body-tertiary">
+            <div class="container py-lg-4">
+                <div class="row g-5 align-items-center">
+                    <div class="col-12 col-lg-5">
+                        <div class="ratio ratio-4x3 rounded-3 overflow-hidden">
+                            <img src="img/evento-crachas.jpg" class="object-fit-cover" alt="Participantes mostrando os crachás da TechNexus" loading="lazy">
                         </div>
-                        <div class="col-6">
-                            <div class="p-4 rounded-4 border border-primary-subtle">
-                                <h3 class="display-6 fw-bold mb-1">18</h3>
-                                <p class="small text-dark fw-semibold mb-0">Edições realizadas</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-4 rounded-4 border border-primary-subtle">
-                                <h3 class="display-6 fw-bold mb-1">100%</h3>
-                                <p class="small text-dark fw-semibold mb-0">Certificado digital gratuito</p>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="p-4 rounded-4 border border-primary-subtle">
-                                <h3 class="display-6 fw-bold mb-1">3 Trilhas</h3>
-                                <p class="small text-dark fw-semibold mb-0">IA, Segurança e Verde</p>
-                            </div>
-                        </div>
+                    </div>
+                    <div class="col-12 col-lg-7">
+                        <h2 class="fw-bold mb-2">Como funciona o nosso evento</h2>
+                        <p class="text-body-secondary mb-3">Do ingresso ao certificado, o dia do participante tem três momentos.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item bg-transparent px-0 py-4">
+                                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis mb-2">Antes do evento</span>
+                                <h3 class="h5 fw-bold mb-2">Ingresso por QR Code</h3>
+                                <p class="text-body-secondary mb-0">Depois da compra, o ingresso chega por e-mail com um QR Code. Na chegada, basta apresentá-lo na recepção para retirar o crachá e o kit do participante.</p>
+                            </li>
+                            <li class="list-group-item bg-transparent px-0 py-4">
+                                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis mb-2">Durante as palestras</span>
+                                <h3 class="h5 fw-bold mb-2">Apresentação e perguntas</h3>
+                                <p class="text-body-secondary mb-0">Cada palestra tem uma hora de apresentação e meia hora aberta para perguntas do público, para a conversa com os especialistas ir além dos slides.</p>
+                            </li>
+                            <li class="list-group-item bg-transparent px-0 py-4">
+                                <span class="badge rounded-pill bg-primary-subtle text-primary-emphasis mb-2">Intervalos e encerramento</span>
+                                <h3 class="h5 fw-bold mb-2">Feira de startups e certificado</h3>
+                                <p class="text-body-secondary mb-0">Nos intervalos, a feira de startups e as áreas de convivência ficam abertas. No fim do dia, todos recebem certificado digital de 8 horas, aceito como atividade complementar.</p>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <!-- Como Funciona o Evento (3 Pilares) -->
-            <div class="mb-4 pt-3">
-                <h2 class="h3 fw-bold text-dark">Como funciona o nosso evento?</h2>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 shadow-sm border-top border-primary border-4">
-                        <div class="card-body">
-                            <h3 class="h5 fw-bold text-dark">Acesso Simples e Digital</h3>
-                            <p class="card-text text-body-secondary small">
-                                Após realizar a inscrição online, o participante recebe um QR Code por e-mail. No dia do evento, basta apresentá-lo na recepção para retirar seu crachá e kit de boas-vindas.
-                            </p>
+        <!-- ===== CHAMADA FINAL ===== -->
+        <section class="py-5">
+            <div class="container py-lg-4">
+                <div class="bg-primary-subtle rounded-3 p-4 p-md-5">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-12 col-lg-8">
+                            <h2 class="h3 fw-bold mb-2">Quer saber das próximas edições?</h2>
+                            <p class="text-body-secondary mb-0">Deixe seu e-mail e avisamos quando novas datas e palestrantes forem anunciados.</p>
+                        </div>
+                        <div class="col-12 col-lg-4 text-lg-end">
+                            <a href="saiba_mais.html" class="btn btn-primary btn-lg px-4">Receber novidades</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 shadow-sm border-top border-info border-4">
-                        <div class="card-body">
-                            <h3 class="h5 fw-bold text-dark">Conteúdo Sem Enrolação</h3>
-                            <p class="card-text text-body-secondary small">
-                                Cada palestra tem 1 hora de apresentação técnica seguida de 30 minutos abertos para perguntas da plateia, garantindo troca real entre público e especialistas.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-md-4">
-                    <div class="card h-100 shadow-sm border-top border-primary border-4">
-                        <div class="card-body">
-                            <h3 class="h5 fw-bold text-dark">Conexões e Horas Complementares</h3>
-                            <p class="card-text text-body-secondary small">
-                                Nos intervalos, os participantes têm acesso livre à feira de startups e áreas de convivência. Ao final do dia, todos recebem certificado de 8 horas válido para faculdades.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-5 p-4 p-md-5 rounded-4 cta-technexus">
-                <h4 class="fw-bold text-primary-emphasis">Saiba de mais palestras como essa</h4>
-                <p class="text-body-secondary mb-4">Inscreva-se para acompanhar este e os próximos eventos de tecnologia.</p>
-                <a href="saiba_mais.html" class="btn btn-primary btn-lg px-5 fw-semibold shadow-sm">Saiba mais</a>
             </div>
         </section>
     </main>
@@ -144,7 +141,7 @@
                     <a href="index.html" class="d-inline-block mb-3">
                         <img src="img/logo.horizontal.png" alt="TechNexus" width="200" height="48">
                     </a>
-                    <p class="footer-texto small mb-4">Conectando estudantes, pesquisadores, desenvolvedores e profissionais em encontros sobre Inteligência Artificial, Cibersegurança e Sustentabilidade Digital.</p>
+                    <p class="footer-texto small mb-4">Palestras sobre inteligência artificial, cibersegurança e sustentabilidade digital em Porto Alegre. Organização: TechNexus Conferências Brasil, desde 2018.</p>
                     <div class="d-flex gap-2">
                         <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -174,12 +171,12 @@
                 </div>
 
                 <div class="col-12 col-md-4 col-lg-4">
-                    <h2 class="footer-titulo">Local e horário</h2>
+                    <h2 class="footer-titulo">Onde e quando</h2>
                     <ul class="list-unstyled footer-texto small mb-4">
-                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685 — Parque Farroupilha, Porto Alegre - RS</span></li>
-                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 08h30 às 17h00</span></li>
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685, Parque Farroupilha, Porto Alegre (RS)</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 8h30 às 17h</span></li>
                     </ul>
-                    <a href="saiba_mais.html" class="btn btn-saiba-mais btn-sm fw-semibold px-3">Tire suas dúvidas</a>
+                    <a href="programacao_dia.html#localizacao" class="footer-topo small fw-semibold">Como chegar <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -191,6 +188,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== BOTÃO FIXO DO WHATSAPP =====
+         Para abrir direto na conversa da organização, troque o link por https://wa.me/55DDDNUMERO -->
+    <a href="https://wa.me/?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20TechNexus." class="btn btn-whatsapp rounded-circle position-fixed bottom-0 end-0 m-3 m-md-4 z-3 d-inline-flex align-items-center justify-content-center" target="_blank" rel="noopener" aria-label="Falar com a TechNexus pelo WhatsApp" title="Falar pelo WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
 </body>

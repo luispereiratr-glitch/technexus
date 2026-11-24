@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white text-dark">
+<body>
     <!-- ===== MENU (igual em todas as páginas) ===== -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-technexus" aria-label="Menu principal">
@@ -39,119 +39,117 @@
     </header>
 
     <main>
-        <section class="text-white py-5 text-center banner-technexus">
+        <section class="banner-technexus text-center">
             <div class="container">
-                <h1 class="display-5 fw-bold mb-2">Nossos Expositores</h1>
-                <p class="mb-0">Conheça quem vai subir ao palco da TechNexus.</p>
+                <h1 class="display-5">Expositores</h1>
+                <p>Os especialistas que apresentam as três palestras desta edição: trajetória, áreas de atuação e horário de cada um.</p>
             </div>
         </section>
 
-        <!-- ===== PALESTRANTES: ao rolar a página, passa para o próximo ===== -->
-        <section class="palestrantes-scroll" data-palestrantes aria-label="Palestrantes">
+        <!-- ===== EXPOSITORES: ao rolar a página, passa para o próximo ===== -->
+        <section class="palestrantes-scroll" data-palestrantes aria-label="Expositores">
             <div class="palestrantes-palco">
                 <div class="container h-100 position-relative">
 
-                    <!-- Indicador lateral: mostra em qual palestrante está e permite pular -->
-                    <nav class="palestrantes-progresso" aria-label="Escolher palestrante">
+                    <!-- Indicador lateral: mostra em qual expositor está e permite pular -->
+                    <nav class="palestrantes-progresso" aria-label="Escolher expositor">
                         <button type="button" class="palestrantes-ponto ativo" data-ir-para="0"><span class="visually-hidden">Levi Martinelo</span></button>
                         <button type="button" class="palestrantes-ponto" data-ir-para="1"><span class="visually-hidden">Aron Ribeiro</span></button>
                         <button type="button" class="palestrantes-ponto" data-ir-para="2"><span class="visually-hidden">Carmen Sualinno</span></button>
                     </nav>
 
-                    <!-- Palestrante 1 -->
-                    <article class="palestrante-slide ativo" style="--cor: #4dabf7; --cor-rgb: 77, 171, 247;">
+                    <!-- Expositor 1 -->
+                    <article class="palestrante-slide ativo" id="levi-martinelo">
                         <div class="row h-100 align-items-center g-4 g-lg-5">
                             <div class="col-12 col-lg-5">
                                 <div class="palestrante-foto">
                                     <img src="img/palestrante1.png" alt="Foto de Levi Martinelo">
-                                    <span class="palestrante-horario"><i class="bi bi-clock me-1"></i>09:30 — 11:00</span>
+                                    <span class="palestrante-horario">9h30 às 11h</span>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-7 palestrante-texto">
-                                <p class="palestrante-numero" aria-hidden="true">01</p>
-                                <span class="palestrante-tema"><i class="bi bi-cpu me-2"></i>Inteligência Artificial</span>
+                                <span class="palestrante-tema">Inteligência Artificial</span>
                                 <h2 class="palestrante-nome">Levi Martinelo</h2>
                                 <p class="palestrante-palestra">“O Futuro da IA e o Comportamento Humano”</p>
                                 <ul class="palestrante-destaques list-unstyled">
-                                    <li><i class="bi bi-shield-check"></i>Ex-Red Team da OpenAI</li>
-                                    <li><i class="bi bi-mortarboard"></i>Professor da PUC-SP</li>
-                                    <li><i class="bi bi-book"></i>Autor de <em>Educar para a IA</em></li>
+                                    <li>Cientista cognitivo</li>
+                                    <li>Professor e pesquisador</li>
+                                    <li>Autor de <em>Educar para a IA</em></li>
                                 </ul>
-                                <p class="palestrante-bio">Cientista cognitivo e uma das principais referências do Brasil em Inteligência Artificial e comportamento humano. Membro da Comunidade de IA do Google, com doutorado pela PUC-SP, passagem pela Paris-Sorbonne e pós-doutorado na Queen Mary University of London. Colunista no UOL.</p>
+                                <p class="palestrante-bio">Pesquisa a relação entre inteligência artificial e comportamento humano. Com doutorado e pós-doutorado na área, divide o tempo entre a sala de aula, a pesquisa e a divulgação científica, sempre com foco em como as ferramentas de IA mudam a forma como aprendemos e trabalhamos.</p>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <a href="palestras.html" class="btn btn-light btn-lg fw-semibold px-4">Ver palestra<i class="bi bi-arrow-right ms-2"></i></a>
-                                    <a href="comprar_ingresso.html" class="btn btn-outline-light btn-lg fw-semibold px-4">Garantir meu ingresso</a>
+                                    <a href="palestras.html#palestra-ia" class="btn btn-light btn-lg px-4">Ver palestra<i class="bi bi-arrow-right ms-2"></i></a>
+                                    <a href="comprar_ingresso.html" class="btn btn-outline-light btn-lg px-4">Garantir meu ingresso</a>
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Palestrante 2 -->
-                    <article class="palestrante-slide" style="--cor: #b197fc; --cor-rgb: 177, 151, 252;">
+                    <!-- Expositor 2 -->
+                    <article class="palestrante-slide" id="aron-ribeiro">
                         <div class="row h-100 align-items-center g-4 g-lg-5">
                             <div class="col-12 col-lg-5">
                                 <div class="palestrante-foto">
                                     <img src="img/palestrante2.png" alt="Foto de Aron Ribeiro">
-                                    <span class="palestrante-horario"><i class="bi bi-clock me-1"></i>13:30 — 15:00</span>
+                                    <span class="palestrante-horario">13h30 às 15h</span>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-7 palestrante-texto">
-                                <p class="palestrante-numero" aria-hidden="true">02</p>
-                                <span class="palestrante-tema"><i class="bi bi-shield-lock me-2"></i>Cibersegurança</span>
+                                <span class="palestrante-tema">Cibersegurança</span>
                                 <h2 class="palestrante-nome">Aron Ribeiro</h2>
                                 <p class="palestrante-palestra">“Defesa Cibernética na Era das Ameaças Automatizadas”</p>
                                 <ul class="palestrante-destaques list-unstyled">
-                                    <li><i class="bi bi-hourglass-split"></i>+20 anos em segurança</li>
-                                    <li><i class="bi bi-people"></i>Criador do Roadsec e do Mind The Sec</li>
-                                    <li><i class="bi bi-mic"></i>Palestrante TEDx</li>
+                                    <li>+20 anos em segurança da informação</li>
+                                    <li>Organizador de conferências de hacking</li>
+                                    <li>Treinamentos em mais de 20 países</li>
                                 </ul>
-                                <p class="palestrante-bio">Especialista em segurança da informação e sócio-fundador da Flipside. Idealizou as maiores conferências de hacking do Brasil e já levou treinamentos e palestras a mais de 20 países. Conhecido por traduzir temas complexos de defesa cibernética de forma acessível e prática.</p>
+                                <p class="palestrante-bio">Especialista em segurança da informação e sócio-fundador de uma consultoria da área. Ajudou a criar algumas das principais conferências de hacking do país e é conhecido por explicar temas complexos de defesa cibernética de forma prática e acessível.</p>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <a href="palestras.html" class="btn btn-light btn-lg fw-semibold px-4">Ver palestra<i class="bi bi-arrow-right ms-2"></i></a>
-                                    <a href="comprar_ingresso.html" class="btn btn-outline-light btn-lg fw-semibold px-4">Garantir meu ingresso</a>
+                                    <a href="palestras.html#palestra-seguranca" class="btn btn-light btn-lg px-4">Ver palestra<i class="bi bi-arrow-right ms-2"></i></a>
+                                    <a href="comprar_ingresso.html" class="btn btn-outline-light btn-lg px-4">Garantir meu ingresso</a>
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Palestrante 3 -->
-                    <article class="palestrante-slide" style="--cor: #51cf66; --cor-rgb: 81, 207, 102;">
+                    <!-- Expositora 3 -->
+                    <article class="palestrante-slide" id="carmen-sualinno">
                         <div class="row h-100 align-items-center g-4 g-lg-5">
                             <div class="col-12 col-lg-5">
                                 <div class="palestrante-foto">
                                     <img src="img/palestrante3.png" alt="Foto de Carmen Sualinno">
-                                    <span class="palestrante-horario"><i class="bi bi-clock me-1"></i>15:30 — 17:00</span>
+                                    <span class="palestrante-horario">15h30 às 17h</span>
                                 </div>
                             </div>
                             <div class="col-12 col-lg-7 palestrante-texto">
-                                <p class="palestrante-numero" aria-hidden="true">03</p>
-                                <span class="palestrante-tema"><i class="bi bi-tree me-2"></i>Sustentabilidade &amp; Tech</span>
+                                <span class="palestrante-tema">Sustentabilidade digital</span>
                                 <h2 class="palestrante-nome">Carmen Sualinno</h2>
                                 <p class="palestrante-palestra">“Tecnologia Verde e Transição Energética”</p>
                                 <ul class="palestrante-destaques list-unstyled">
-                                    <li><i class="bi bi-tv"></i>Editoria do Cidades e Soluções (GloboNews)</li>
-                                    <li><i class="bi bi-mortarboard"></i>Docência na COPPE/UFRJ</li>
-                                    <li><i class="bi bi-globe-americas"></i>Referência em jornalismo ambiental</li>
+                                    <li>Jornalista ambiental</li>
+                                    <li>Pós-graduada em Gestão Ambiental</li>
+                                    <li>Professora universitária</li>
                                 </ul>
-                                <p class="palestrante-bio">Jornalista, escritor e professor, com pós-graduação em Gestão Ambiental pela COPPE/UFRJ. Comentarista da TV Globo e criador do curso de Jornalismo Ambiental da PUC-Rio, conecta soluções tecnológicas e transição energética aos desafios do nosso tempo.</p>
+                                <p class="palestrante-bio">Jornalista, escritora e professora. Comentarista de televisão e criadora de um curso de jornalismo ambiental, acompanha de perto como novas tecnologias podem acelerar a transição energética e reduzir o impacto ambiental das empresas.</p>
                                 <div class="d-flex flex-wrap gap-2">
-                                    <a href="palestras.html" class="btn btn-light btn-lg fw-semibold px-4">Ver palestra<i class="bi bi-arrow-right ms-2"></i></a>
-                                    <a href="comprar_ingresso.html" class="btn btn-outline-light btn-lg fw-semibold px-4">Garantir meu ingresso</a>
+                                    <a href="palestras.html#palestra-sustentabilidade" class="btn btn-light btn-lg px-4">Ver palestra<i class="bi bi-arrow-right ms-2"></i></a>
+                                    <a href="comprar_ingresso.html" class="btn btn-outline-light btn-lg px-4">Garantir meu ingresso</a>
                                 </div>
                             </div>
                         </div>
                     </article>
 
-                    <div class="palestrantes-dica" aria-hidden="true"><i class="bi bi-mouse me-2"></i>Role para conhecer o próximo</div>
+                    <div class="palestrantes-dica" aria-hidden="true">Role para conhecer o próximo</div>
                 </div>
             </div>
         </section>
 
-        <section class="container my-5">
-            <div class="text-center p-4 p-md-5 rounded-4 cta-technexus">
-                <h4 class="fw-bold text-primary-emphasis">Ficou com alguma dúvida sobre os palestrantes?</h4>
-                <p class="text-body-secondary mb-4">Envie sua pergunta para a organização e responderemos por e-mail.</p>
-                <a href="saiba_mais.html" class="btn btn-primary btn-lg px-5 fw-semibold shadow-sm">Saiba mais</a>
+        <!-- ===== DÚVIDAS (link simples, sem botão) ===== -->
+        <section class="py-5">
+            <div class="container text-center py-lg-4">
+                <h2 class="h4 fw-bold mb-2">Quer saber onde e quando cada palestra acontece?</h2>
+                <p class="text-body-secondary mb-3">Horários, salas e o mapa do local estão reunidos na programação do dia.</p>
+                <a href="programacao_dia.html" class="fw-semibold link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Ver a programação completa</a>
             </div>
         </section>
     </main>
@@ -164,7 +162,7 @@
                     <a href="index.html" class="d-inline-block mb-3">
                         <img src="img/logo.horizontal.png" alt="TechNexus" width="200" height="48">
                     </a>
-                    <p class="footer-texto small mb-4">Conectando estudantes, pesquisadores, desenvolvedores e profissionais em encontros sobre Inteligência Artificial, Cibersegurança e Sustentabilidade Digital.</p>
+                    <p class="footer-texto small mb-4">Palestras sobre inteligência artificial, cibersegurança e sustentabilidade digital em Porto Alegre. Organização: TechNexus Conferências Brasil, desde 2018.</p>
                     <div class="d-flex gap-2">
                         <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -194,12 +192,12 @@
                 </div>
 
                 <div class="col-12 col-md-4 col-lg-4">
-                    <h2 class="footer-titulo">Local e horário</h2>
+                    <h2 class="footer-titulo">Onde e quando</h2>
                     <ul class="list-unstyled footer-texto small mb-4">
-                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685 — Parque Farroupilha, Porto Alegre - RS</span></li>
-                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 08h30 às 17h00</span></li>
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685, Parque Farroupilha, Porto Alegre (RS)</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 8h30 às 17h</span></li>
                     </ul>
-                    <a href="saiba_mais.html" class="btn btn-saiba-mais btn-sm fw-semibold px-3">Tire suas dúvidas</a>
+                    <a href="programacao_dia.html#localizacao" class="footer-topo small fw-semibold">Como chegar <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -211,6 +209,12 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== BOTÃO FIXO DO WHATSAPP =====
+         Para abrir direto na conversa da organização, troque o link por https://wa.me/55DDDNUMERO -->
+    <a href="https://wa.me/?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20TechNexus." class="btn btn-whatsapp rounded-circle position-fixed bottom-0 end-0 m-3 m-md-4 z-3 d-inline-flex align-items-center justify-content-center" target="_blank" rel="noopener" aria-label="Falar com a TechNexus pelo WhatsApp" title="Falar pelo WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
     <script src="js/palestrantes.js"></script>

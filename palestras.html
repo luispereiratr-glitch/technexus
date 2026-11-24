@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,7 +12,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="bg-white text-dark">
+<body>
     <!-- ===== MENU (igual em todas as páginas) ===== -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-technexus" aria-label="Menu principal">
@@ -39,77 +39,163 @@
     </header>
 
     <main>
-        <section class="text-white py-5 mb-5 text-center shadow-sm banner-technexus">
+        <section class="banner-technexus text-center">
             <div class="container">
-                <h1 class="display-5 fw-bold mb-2">Nossas Palestras</h1>
-                <p class="mb-0">Três temas essenciais para entender os caminhos da tecnologia.</p>
+                <h1 class="display-5">Palestras</h1>
+                <p>Três apresentações de 1h30 cada, com 30 minutos reservados para perguntas do público.</p>
             </div>
         </section>
 
-        <section class="container mb-5">
-            <div class="mb-4">
-                <h2 class="h3 fw-bold text-dark">Ideias, desafios e soluções para o futuro</h2>
-                <p class="text-body-secondary">Cada palestra apresenta um olhar diferente sobre as mudanças que já fazem parte do nosso cotidiano.</p>
-            </div>
+        <!-- ===== PALESTRAS: mesmo componente visual da página Expositores ===== -->
+        <section class="palestrantes-scroll" data-palestrantes aria-label="Palestras">
+            <div class="palestrantes-palco">
+                <div class="container h-100 position-relative">
 
-            <div class="row g-4 mb-4 align-items-center">
-                <div class="col-12 col-md-5">
-                    <div class="lecture-image">
-                        <img src="img/palestra.jpg" alt="Palestra sobre Inteligência Artificial">
-                    </div>
-                </div>
-                <div class="col-12 col-md-7">
-                    <span class="badge bg-primary-subtle text-primary-emphasis mb-2">Inteligência Artificial</span>
-                    <h2 class="h4 fw-bold">O Futuro da IA e o Comportamento Humano</h2>
-                    <p class="fw-semibold text-body-secondary">Como os modelos generativos transformam a educação e o mercado de trabalho.</p>
-                    <p class="text-body-secondary">Uma conversa sobre o avanço da inteligência artificial, suas aplicações e os impactos que essas ferramentas podem trazer para a forma como aprendemos, trabalhamos e nos relacionamos.</p>
-                    <p class="mb-3"><strong>Palestrante:</strong> Levi Martinelo</p>
-                    <a href="expositores.html" class="btn btn-outline-primary btn-sm">Conheça o palestrante</a>
-                </div>
-            </div>
+                    <nav class="palestrantes-progresso" aria-label="Escolher palestra">
+                        <button type="button" class="palestrantes-ponto ativo" data-ir-para="0"><span class="visually-hidden">Inteligência Artificial</span></button>
+                        <button type="button" class="palestrantes-ponto" data-ir-para="1"><span class="visually-hidden">Cibersegurança</span></button>
+                        <button type="button" class="palestrantes-ponto" data-ir-para="2"><span class="visually-hidden">Sustentabilidade digital</span></button>
+                    </nav>
 
-            <hr class="my-4">
+                    <!-- Palestra 1 -->
+                    <article class="palestrante-slide ativo" id="palestra-ia">
+                        <div class="row h-100 align-items-center g-4 g-lg-5">
+                            <div class="col-12 col-lg-5">
+                                <div class="palestra-ficha">
+                                    <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-4 palestra-ficha-foto">
+                                        <img src="img/palestra-ia.jpg" class="object-fit-cover" alt="Ilustração de um rosto humano diante de um robô" loading="lazy">
+                                    </div>
+                                    <dl>
+                                        <dt>Horário</dt>
+                                        <dd>9h30 às 11h</dd>
+                                        <dt>Local</dt>
+                                        <dd>Auditório • Ala A</dd>
+                                        <dt>Formato</dt>
+                                        <dd>1h de apresentação + 30 min de perguntas</dd>
+                                    </dl>
+                                    <div class="palestra-autor">
+                                        <img src="img/palestrante1.png" alt="" loading="lazy">
+                                        <div>
+                                            <small class="d-block text-white-50">Palestrante</small>
+                                            <strong>Levi Martinelo</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-7 palestrante-texto">
+                                <span class="palestrante-tema">Inteligência Artificial</span>
+                                <h2 class="palestrante-nome titulo-palestra">O Futuro da IA e o Comportamento Humano</h2>
+                                <p class="palestrante-palestra">Como os modelos generativos transformam a educação e o mercado de trabalho.</p>
+                                <ul class="palestrante-destaques list-unstyled" aria-label="Temas abordados">
+                                    <li>Modelos generativos</li>
+                                    <li>IA na educação</li>
+                                    <li>Mercado de trabalho</li>
+                                </ul>
+                                <p class="palestrante-bio">Uma conversa sobre o avanço da inteligência artificial, suas aplicações e os impactos que essas ferramentas trazem para a forma como aprendemos, trabalhamos e nos relacionamos.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="expositores.html#levi-martinelo" class="btn btn-light btn-lg px-4">Conhecer o palestrante<i class="bi bi-arrow-right ms-2"></i></a>
+                                    <a href="comprar_ingresso.html" class="btn btn-outline-light btn-lg px-4">Garantir meu ingresso</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-            <div class="row g-4 mb-4 align-items-center">
-                <div class="col-12 col-md-5">
-                    <div class="lecture-image">
-                        <img src="img/palestra.jpg" alt="Palestra sobre Cibersegurança">
-                    </div>
-                </div>
-                <div class="col-12 col-md-7">
-                    <span class="badge bg-info-subtle text-primary-emphasis mb-2">Cibersegurança</span>
-                    <h2 class="h4 fw-bold">Defesa Cibernética na Era das Ameaças Automatizadas</h2>
-                    <p class="fw-semibold text-body-secondary">Demonstração prática de proteção de dados e mitigação de riscos digitais.</p>
-                    <p class="text-body-secondary">Uma abordagem sobre segurança da informação, prevenção de ataques e estratégias para proteger pessoas e organizações em um cenário cada vez mais conectado.</p>
-                    <p class="mb-3"><strong>Palestrante:</strong> Aron Ribeiro</p>
-                    <a href="expositores.html" class="btn btn-outline-primary btn-sm">Conheça o palestrante</a>
-                </div>
-            </div>
+                    <!-- Palestra 2 -->
+                    <article class="palestrante-slide" id="palestra-seguranca">
+                        <div class="row h-100 align-items-center g-4 g-lg-5">
+                            <div class="col-12 col-lg-5">
+                                <div class="palestra-ficha">
+                                    <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-4 palestra-ficha-foto">
+                                        <img src="img/palestra-seguranca.jpg" class="object-fit-cover" alt="Tela com sequências de código binário" loading="lazy">
+                                    </div>
+                                    <dl>
+                                        <dt>Horário</dt>
+                                        <dd>13h30 às 15h</dd>
+                                        <dt>Local</dt>
+                                        <dd>Arena Cyber • Ala B</dd>
+                                        <dt>Formato</dt>
+                                        <dd>1h de apresentação + 30 min de perguntas</dd>
+                                    </dl>
+                                    <div class="palestra-autor">
+                                        <img src="img/palestrante2.png" alt="" loading="lazy">
+                                        <div>
+                                            <small class="d-block text-white-50">Palestrante</small>
+                                            <strong>Aron Ribeiro</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-7 palestrante-texto">
+                                <span class="palestrante-tema">Cibersegurança</span>
+                                <h2 class="palestrante-nome titulo-palestra">Defesa Cibernética na Era das Ameaças Automatizadas</h2>
+                                <p class="palestrante-palestra">Demonstração prática de proteção de dados e redução de riscos digitais.</p>
+                                <ul class="palestrante-destaques list-unstyled" aria-label="Temas abordados">
+                                    <li>Proteção de dados</li>
+                                    <li>Ataques automatizados</li>
+                                    <li>Segurança nas organizações</li>
+                                </ul>
+                                <p class="palestrante-bio">Uma abordagem sobre segurança da informação, prevenção de ataques e estratégias para proteger pessoas e organizações em um cenário cada vez mais conectado.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="expositores.html#aron-ribeiro" class="btn btn-light btn-lg px-4">Conhecer o palestrante<i class="bi bi-arrow-right ms-2"></i></a>
+                                    <a href="comprar_ingresso.html" class="btn btn-outline-light btn-lg px-4">Garantir meu ingresso</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-            <hr class="my-4">
+                    <!-- Palestra 3 -->
+                    <article class="palestrante-slide" id="palestra-sustentabilidade">
+                        <div class="row h-100 align-items-center g-4 g-lg-5">
+                            <div class="col-12 col-lg-5">
+                                <div class="palestra-ficha">
+                                    <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-4 palestra-ficha-foto">
+                                        <img src="img/palestra-sustentabilidade.jpg" class="object-fit-cover foto-rosto" alt="Equipe ajustando máquinas em uma linha de produção" loading="lazy">
+                                    </div>
+                                    <dl>
+                                        <dt>Horário</dt>
+                                        <dd>15h30 às 17h</dd>
+                                        <dt>Local</dt>
+                                        <dd>Auditório Gaia • 2º andar</dd>
+                                        <dt>Formato</dt>
+                                        <dd>1h de apresentação + 30 min de perguntas</dd>
+                                    </dl>
+                                    <div class="palestra-autor">
+                                        <img src="img/palestrante3.png" alt="" loading="lazy">
+                                        <div>
+                                            <small class="d-block text-white-50">Palestrante</small>
+                                            <strong>Carmen Sualinno</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-7 palestrante-texto">
+                                <span class="palestrante-tema">Sustentabilidade digital</span>
+                                <h2 class="palestrante-nome titulo-palestra">Tecnologia Verde e Transição Energética</h2>
+                                <p class="palestrante-palestra">Inovações tecnológicas aplicadas à descarbonização e à economia sustentável.</p>
+                                <ul class="palestrante-destaques list-unstyled" aria-label="Temas abordados">
+                                    <li>Descarbonização</li>
+                                    <li>Transição energética</li>
+                                    <li>Economia sustentável</li>
+                                </ul>
+                                <p class="palestrante-bio">Um debate sobre como a inovação pode reduzir impactos ambientais, apoiar a transição energética e ajudar empresas a desenvolver soluções mais sustentáveis.</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <a href="expositores.html#carmen-sualinno" class="btn btn-light btn-lg px-4">Conhecer a palestrante<i class="bi bi-arrow-right ms-2"></i></a>
+                                    <a href="comprar_ingresso.html" class="btn btn-outline-light btn-lg px-4">Garantir meu ingresso</a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
 
-            <div class="row g-4 align-items-center">
-                <div class="col-12 col-md-5">
-                    <div class="lecture-image">
-                        <img src="img/palestra.jpg" alt="Palestra sobre Sustentabilidade">
-                    </div>
-                </div>
-                <div class="col-12 col-md-7">
-                    <span class="badge bg-success-subtle text-success-emphasis mb-2">Sustentabilidade &amp; Tech</span>
-                    <h2 class="h4 fw-bold">Tecnologia Verde e Transição Energética</h2>
-                    <p class="fw-semibold text-body-secondary">Inovações tecnológicas aplicadas à descarbonização e economia sustentável.</p>
-                    <p class="text-body-secondary">Um debate sobre como a inovação pode contribuir para reduzir impactos ambientais, apoiar a transição energética e desenvolver soluções mais sustentáveis.</p>
-                    <p class="mb-3"><strong>Palestrante:</strong> Carmen Sualinno</p>
-                    <a href="expositores.html" class="btn btn-outline-primary btn-sm">Conheça a palestrante</a>
+                    <div class="palestrantes-dica" aria-hidden="true">Role para ver a próxima palestra</div>
                 </div>
             </div>
         </section>
 
-        <section class="container mb-5">
-            <div class="text-center p-4 p-md-5 rounded-4 cta-technexus">
-                <h2 class="h4 fw-bold text-primary-emphasis">Ficou com alguma dúvida sobre as palestras?</h2>
-                <p class="text-body-secondary mb-4">Envie sua pergunta para a organização e responderemos por e-mail.</p>
-                <a href="saiba_mais.html" class="btn btn-primary btn-lg px-5 fw-semibold">Saiba mais</a>
+        <section class="py-5">
+            <div class="container text-center py-lg-4">
+                <h2 class="h4 fw-bold mb-2">Tem alguma pergunta sobre as palestras?</h2>
+                <p class="text-body-secondary mb-3">Envie para a organização e respondemos por e-mail.</p>
+                <a href="saiba_mais.html" class="fw-semibold link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Enviar uma pergunta</a>
             </div>
         </section>
     </main>
@@ -122,7 +208,7 @@
                     <a href="index.html" class="d-inline-block mb-3">
                         <img src="img/logo.horizontal.png" alt="TechNexus" width="200" height="48">
                     </a>
-                    <p class="footer-texto small mb-4">Conectando estudantes, pesquisadores, desenvolvedores e profissionais em encontros sobre Inteligência Artificial, Cibersegurança e Sustentabilidade Digital.</p>
+                    <p class="footer-texto small mb-4">Palestras sobre inteligência artificial, cibersegurança e sustentabilidade digital em Porto Alegre. Organização: TechNexus Conferências Brasil, desde 2018.</p>
                     <div class="d-flex gap-2">
                         <a href="#" class="footer-social" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
                         <a href="#" class="footer-social" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
@@ -152,12 +238,12 @@
                 </div>
 
                 <div class="col-12 col-md-4 col-lg-4">
-                    <h2 class="footer-titulo">Local e horário</h2>
+                    <h2 class="footer-titulo">Onde e quando</h2>
                     <ul class="list-unstyled footer-texto small mb-4">
-                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685 — Parque Farroupilha, Porto Alegre - RS</span></li>
-                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 08h30 às 17h00</span></li>
+                        <li class="d-flex gap-2 mb-2"><i class="bi bi-geo-alt-fill footer-icone"></i><span>Auditório Araújo Vianna<br>Av. Osvaldo Aranha, 685, Parque Farroupilha, Porto Alegre (RS)</span></li>
+                        <li class="d-flex gap-2"><i class="bi bi-clock-fill footer-icone"></i><span>Das 8h30 às 17h</span></li>
                     </ul>
-                    <a href="saiba_mais.html" class="btn btn-saiba-mais btn-sm fw-semibold px-3">Tire suas dúvidas</a>
+                    <a href="programacao_dia.html#localizacao" class="footer-topo small fw-semibold">Como chegar <i class="bi bi-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -170,6 +256,13 @@
         </div>
     </footer>
 
+    <!-- ===== BOTÃO FIXO DO WHATSAPP =====
+         Para abrir direto na conversa da organização, troque o link por https://wa.me/55DDDNUMERO -->
+    <a href="https://wa.me/?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20TechNexus." class="btn btn-whatsapp rounded-circle position-fixed bottom-0 end-0 m-3 m-md-4 z-3 d-inline-flex align-items-center justify-content-center" target="_blank" rel="noopener" aria-label="Falar com a TechNexus pelo WhatsApp" title="Falar pelo WhatsApp">
+        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+    </a>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js" integrity="sha384-WyOxWvTyr1QaMPfiPJSv76iReVthorl5uWlFtZPyK0IEB0hGzo9y5Bp9mYanr8Bu" crossorigin="anonymous"></script>
+    <script src="js/palestrantes.js"></script>
 </body>
 </html>

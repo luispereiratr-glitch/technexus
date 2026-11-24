@@ -1,29 +1,218 @@
+/* =====================================================================
+   TechNexus — folha de estilos única do site
+   Paleta: azul-marinho (base), roxo (destaque), branco e cinzas neutros
+   Layout e componentes: Bootstrap 5.3 (classes utilitárias, card, list-group,
+   ratio, carousel). Este arquivo só guarda a identidade visual e o que o
+   Bootstrap não oferece.
+   Botões: .btn-primary, .btn-outline-primary e, em fundo escuro, .btn-light / .btn-outline-light
+   ===================================================================== */
+
 :root {
     --azul-marinho: #091c52;
-    --azul: #0d6efd;
+    --azul-marinho-claro: #1a2f72;
     --roxo: #6950a1;
-    --texto: #212529;
-    --cinza: #6c757d;
-    --fundo-claro: #f5f6fa;
+    --destaque: #8fa8ff;          /* azul-lavanda usado sobre fundo escuro */
+    --texto: #1f2430;
+    --fundo-claro: #f4f5fa;
+
+    /* Ajustes do Bootstrap: textos secundários mais escuros (melhor contraste) */
+    --bs-secondary-color: #4a5263;
+    --bs-secondary-color-rgb: 74, 82, 99;
+    --bs-body-color: #1f2430;
+    --bs-border-radius: 8px;
+    --bs-border-radius-lg: 10px;
+    /* "primary" do Bootstrap passa a ser o azul-marinho do site (textos, badges, alertas) */
+    --bs-primary: #091c52;
+    --bs-primary-rgb: 9, 28, 82;
+    --bs-primary-text-emphasis: #091c52;
+    --bs-primary-bg-subtle: #e7eaf5;
+    --bs-primary-border-subtle: #c5cce4;
+    --bs-link-color: var(--azul-marinho);
+    --bs-link-color-rgb: 9, 28, 82;
+    --bs-link-hover-color: var(--roxo);
+    --bs-link-hover-color-rgb: 105, 80, 161;
+}
+
+/* ===================== TEMA ESCURO DO SITE =====================
+   Todas as páginas públicas usam <html data-bs-theme="dark">, o tema escuro
+   nativo do Bootstrap 5.3, recolorido com o azul-marinho da TechNexus.
+   Cards, formulários, listas e acordeões se adaptam sozinhos.
+   (O painel admin continua no tema claro definido acima.) */
+:root[data-bs-theme="dark"] {
+    --bs-body-bg: #0a1640;
+    --bs-body-bg-rgb: 10, 22, 64;
+    --bs-body-color: #e6e9f2;
+    --bs-body-color-rgb: 230, 233, 242;
+    --bs-emphasis-color: #fff;
+    --bs-emphasis-color-rgb: 255, 255, 255;
+    --bs-secondary-color: rgba(230, 233, 242, .72);
+    --bs-secondary-color-rgb: 230, 233, 242;
+    --bs-secondary-bg: #13235c;
+    --bs-secondary-bg-rgb: 19, 35, 92;
+    --bs-tertiary-bg: #0e1c4f;
+    --bs-tertiary-bg-rgb: 14, 28, 79;
+    --bs-border-color: rgba(255, 255, 255, .13);
+    --bs-border-color-translucent: rgba(255, 255, 255, .13);
+
+    --bs-primary: #8fa8ff;
+    --bs-primary-rgb: 143, 168, 255;
+    --bs-primary-text-emphasis: #b9c8ff;
+    --bs-primary-bg-subtle: rgba(143, 168, 255, .12);
+    --bs-primary-border-subtle: rgba(143, 168, 255, .35);
+    --bs-secondary-text-emphasis: #e6e9f2;
+    --bs-secondary-bg-subtle: rgba(255, 255, 255, .06);
+    --bs-secondary-border-subtle: rgba(255, 255, 255, .15);
+
+    --bs-link-color: #b9c8ff;
+    --bs-link-color-rgb: 185, 200, 255;
+    --bs-link-hover-color: #fff;
+    --bs-link-hover-color-rgb: 255, 255, 255;
+    --bs-heading-color: #fff;
+
+    color-scheme: dark;
+}
+
+/* Cards e listas: superfície levemente mais clara que o fundo, como na ficha das palestras */
+[data-bs-theme="dark"] .card {
+    --bs-card-bg: rgba(255, 255, 255, .04);
+    --bs-card-border-color: rgba(255, 255, 255, .12);
+    --bs-card-cap-bg: transparent;
+}
+
+[data-bs-theme="dark"] .list-group {
+    --bs-list-group-bg: rgba(255, 255, 255, .04);
+}
+
+[data-bs-theme="dark"] .accordion {
+    --bs-accordion-bg: rgba(255, 255, 255, .04);
+    --bs-accordion-active-bg: rgba(143, 168, 255, .1);
+    --bs-accordion-active-color: #fff;
+}
+
+[data-bs-theme="dark"] .form-control,
+[data-bs-theme="dark"] .form-select {
+    background-color: rgba(255, 255, 255, .05);
+}
+
+[data-bs-theme="dark"] .form-select option {
+    color: #1f2430;
+}
+
+/* Botões no fundo escuro: principal branco, secundário com contorno branco */
+[data-bs-theme="dark"] .btn-primary,
+[data-bs-theme="dark"] .btn-light {
+    --bs-btn-color: var(--azul-marinho);
+    --bs-btn-bg: #fff;
+    --bs-btn-border-color: #fff;
+    --bs-btn-hover-color: var(--azul-marinho);
+    --bs-btn-hover-bg: #dfe5fb;
+    --bs-btn-hover-border-color: #dfe5fb;
+    --bs-btn-active-color: var(--azul-marinho);
+    --bs-btn-active-bg: #dfe5fb;
+    --bs-btn-active-border-color: #dfe5fb;
+    --bs-btn-disabled-color: var(--azul-marinho);
+    --bs-btn-disabled-bg: #fff;
+    --bs-btn-disabled-border-color: #fff;
+}
+
+[data-bs-theme="dark"] .btn-outline-primary,
+[data-bs-theme="dark"] .btn-outline-light {
+    --bs-btn-color: #fff;
+    --bs-btn-border-color: rgba(255, 255, 255, .5);
+    --bs-btn-hover-color: var(--azul-marinho);
+    --bs-btn-hover-bg: #fff;
+    --bs-btn-hover-border-color: #fff;
+    --bs-btn-active-color: var(--azul-marinho);
+    --bs-btn-active-bg: #fff;
+    --bs-btn-active-border-color: #fff;
+}
+
+[data-bs-theme="dark"] .btn-check:checked + .btn-outline-primary {
+    color: var(--azul-marinho);
+    background-color: #fff;
+    border-color: #fff;
+}
+
+[data-bs-theme="dark"] .form-check-input:checked {
+    background-color: var(--destaque);
+    border-color: var(--destaque);
+}
+
+html {
+    scroll-padding-top: 96px; /* links internos (#) param abaixo do menu fixo */
 }
 
 body {
     font-family: "Inter", Arial, Helvetica, sans-serif;
-    color: var(--texto);
-    background-color: #fff;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+    letter-spacing: -.01em;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ===================== BOTÕES ===================== */
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color .2s, border-color .2s, color .2s;
+}
+
+.btn-primary {
+    --bs-btn-bg: var(--azul-marinho);
+    --bs-btn-border-color: var(--azul-marinho);
+    --bs-btn-hover-bg: var(--azul-marinho-claro);
+    --bs-btn-hover-border-color: var(--azul-marinho-claro);
+    --bs-btn-active-bg: var(--azul-marinho-claro);
+    --bs-btn-active-border-color: var(--azul-marinho-claro);
+    --bs-btn-disabled-bg: var(--azul-marinho);
+    --bs-btn-disabled-border-color: var(--azul-marinho);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--azul-marinho);
+    --bs-btn-border-color: var(--azul-marinho);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--azul-marinho);
+    --bs-btn-hover-border-color: var(--azul-marinho);
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--azul-marinho);
+    --bs-btn-active-border-color: var(--azul-marinho);
+}
+
+.btn-light {
+    --bs-btn-color: var(--azul-marinho);
+    --bs-btn-hover-color: var(--azul-marinho);
+    --bs-btn-hover-bg: #e8ecf8;
+    --bs-btn-hover-border-color: #e8ecf8;
+}
+
+.btn-outline-light {
+    --bs-btn-border-color: rgba(255, 255, 255, .55);
+    --bs-btn-hover-color: var(--azul-marinho);
+}
+
+/* Opções selecionadas (ingresso, pagamento) */
+.btn-check:checked + .btn-outline-primary,
+.btn-outline-primary:active {
+    color: #fff;
+    background-color: var(--azul-marinho);
+    border-color: var(--azul-marinho);
 }
 
 /* ===================== MENU ===================== */
 .navbar-technexus {
-    background: rgba(9, 28, 82, .96);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background-color: var(--azul-marinho);
     border-bottom: 1px solid rgba(255, 255, 255, .08);
-    box-shadow: 0 4px 18px rgba(9, 28, 82, .25);
 }
 
-.navbar-technexus .navbar-brand span {
-    letter-spacing: .02em;
+.navbar-technexus .navbar-brand img {
+    height: 40px;
+    width: auto;
 }
 
 .navbar-technexus .nav-link {
@@ -42,27 +231,24 @@ body {
 
 .navbar-technexus .nav-link.active {
     color: #fff;
-    background-color: rgba(105, 80, 161, .55);
+    background-color: rgba(255, 255, 255, .14);
 }
 
+/* Botão "Saiba mais" do menu segue o estilo .btn-light */
 .btn-saiba-mais {
     color: var(--azul-marinho);
     background-color: #fff;
     border: 1px solid #fff;
-    border-radius: 8px;
-    transition: background-color .2s, color .2s, transform .2s;
 }
 
 .btn-saiba-mais:hover,
 .btn-saiba-mais:focus,
 .btn-saiba-mais.active {
-    color: #fff;
-    background-color: var(--roxo);
-    border-color: var(--roxo);
-    transform: translateY(-1px);
+    color: var(--azul-marinho);
+    background-color: #e8ecf8;
+    border-color: #e8ecf8;
 }
 
-/* No celular o menu aberto vira uma lista com separação */
 @media (max-width: 991.98px) {
     .navbar-technexus .navbar-collapse {
         padding: .75rem 0 1rem;
@@ -73,90 +259,139 @@ body {
     }
 }
 
-/* ===================== RODAPÉ ===================== */
-.footer-technexus {
-    background: linear-gradient(160deg, #071640 0%, var(--azul-marinho) 55%, #2c2466 100%);
-}
-
-.footer-titulo {
-    font-size: .8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: .08em;
-    color: #fff;
-    margin-bottom: 1rem;
-}
-
-.footer-texto {
-    color: rgba(255, 255, 255, .7);
-}
-
-.footer-links li {
-    margin-bottom: .55rem;
-}
-
-.footer-links a,
-.footer-topo {
-    color: rgba(255, 255, 255, .7);
-    text-decoration: none;
-    transition: color .2s;
-}
-
-.footer-links a:hover,
-.footer-topo:hover {
-    color: #fff;
-}
-
-.footer-icone {
-    color: #8fa8ff;
-}
-
-.footer-social {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    color: #fff;
-    background-color: rgba(255, 255, 255, .08);
-    text-decoration: none;
-    transition: background-color .2s, transform .2s;
-}
-
-.footer-social:hover {
-    color: #fff;
-    background-color: var(--roxo);
-    transform: translateY(-2px);
-}
-
-.footer-linha {
-    border-color: rgba(255, 255, 255, .25);
-}
-
-/* ===================== CONTEÚDO ===================== */
+/* ===================== BANNER DAS PÁGINAS INTERNAS ===================== */
 .banner-technexus {
-    background:
-        radial-gradient(circle at 15% 20%, rgba(13, 110, 253, .25), transparent 45%),
-        linear-gradient(135deg, var(--azul-marinho) 0%, #1b2a6b 55%, var(--roxo) 100%);
+    color: #fff;
+    background-color: var(--azul-marinho);
+    background-image: linear-gradient(180deg, var(--azul-marinho) 0%, #0e2266 100%);
+    padding: 3.5rem 0;
 }
 
-.card-hover,
-.card.shadow-sm {
-    transition: transform .2s, box-shadow .2s;
+.banner-technexus h1 {
+    font-weight: 700;
+    margin-bottom: .5rem;
 }
 
-.card-hover:hover,
-.card.shadow-sm:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 .75rem 1.5rem rgba(9, 28, 82, .12) !important;
+.banner-technexus p {
+    color: rgba(255, 255, 255, .85);
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
 }
 
-/* O formulário não deve "pular" ao passar o mouse */
-.form-card.card.shadow-sm:hover {
-    transform: none;
+/* ===================== HOME: PRIMEIRA SEÇÃO ===================== */
+.hero-logo {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
 }
 
+.hero h1 {
+    font-size: clamp(2rem, 4.2vw, 3.1rem);
+    line-height: 1.1;
+}
+
+.hero .lead {
+    color: rgba(255, 255, 255, .82);
+}
+
+.hero-carrossel .carousel-caption {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 3rem 1.5rem 2.5rem;
+    text-align: left;
+    background: linear-gradient(to top, rgba(5, 15, 46, .8), transparent);
+}
+
+.hero-carrossel .carousel-indicators {
+    justify-content: flex-start;
+    margin: 0 0 1rem 1.5rem;
+}
+
+.hero-carrossel .carousel-indicators [data-bs-target] {
+    width: 24px;
+    height: 3px;
+}
+
+/* Enquadra o rosto nas fotos dos palestrantes (o Bootstrap não tem utilitário para isso) */
+.foto-rosto {
+    object-position: center 22%;
+}
+
+/* ===================== PATROCINADORES (logotipos fictícios) ===================== */
+.logo-patrocinador {
+    color: rgba(255, 255, 255, .5);
+    line-height: 1;
+    white-space: nowrap;
+    transition: color .2s;
+    user-select: none;
+}
+
+.logo-patrocinador:hover {
+    color: #fff;
+}
+
+.lp-altiva {
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: -.06em;
+}
+
+.lp-altiva small {
+    font-size: .8rem;
+    font-weight: 500;
+    letter-spacing: 0;
+    margin-left: .2rem;
+}
+
+.lp-cifrato {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: .32em;
+    padding: .35rem .5rem .35rem .8rem;
+    border: 2px solid currentColor;
+}
+
+.lp-raiz {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.6rem;
+    font-style: italic;
+}
+
+.lp-orbita {
+    font-size: 1.55rem;
+    font-weight: 300;
+    letter-spacing: .02em;
+}
+
+.lp-orbita::before {
+    content: "";
+    display: inline-block;
+    width: .8em;
+    height: .8em;
+    margin-right: .35rem;
+    vertical-align: -.05em;
+    border: 3px solid currentColor;
+    border-radius: 50%;
+}
+
+.lp-pampa {
+    font-family: ui-monospace, "Cascadia Mono", Consolas, monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.lp-vetorial {
+    font-size: 1.45rem;
+    font-weight: 900;
+    font-style: italic;
+    letter-spacing: -.02em;
+    text-transform: uppercase;
+}
+
+/* ===================== PROGRAMAÇÃO ===================== */
 .nome-palestrante {
     font-size: .72rem;
     letter-spacing: .06em;
@@ -169,295 +404,131 @@ body {
     border: 0;
 }
 
-.nav-pills .nav-link.active {
-    background-color: var(--azul-marinho);
-}
-
 .nav-pills .nav-link {
     color: var(--azul-marinho);
 }
 
-.banner-technexus .lead,
-.banner-technexus p {
-    color: rgba(255, 255, 255, .88);
-}
-
-.banner-technexus .container > p {
-    max-width: 760px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn-primary {
+.nav-pills .nav-link.active {
     background-color: var(--azul-marinho);
-    border-color: var(--azul-marinho);
 }
 
-.btn-primary:hover,
-.btn-primary:focus {
-    background-color: var(--roxo);
-    border-color: var(--roxo);
+[data-bs-theme="dark"] .nav-pills .nav-link {
+    color: rgba(255, 255, 255, .8);
 }
 
-.btn-outline-primary {
+[data-bs-theme="dark"] .nav-pills .nav-link:hover {
+    color: #fff;
+}
+
+[data-bs-theme="dark"] .nav-pills .nav-link.active {
     color: var(--azul-marinho);
-    border-color: var(--azul-marinho);
+    background-color: #fff;
 }
 
-.btn-outline-primary:hover {
-    background-color: var(--azul-marinho);
-    border-color: var(--azul-marinho);
-}
-
-/* Espaços reservados para imagens que ainda não foram substituídos */
-.image-placeholder {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
-    padding: 20px;
-    color: #526078;
-    background-color: #eef1f8;
-    border: 1px dashed #aeb9d0;
-    border-radius: 8px;
-    min-height: 220px;
-    font-weight: 600;
-}
-
-.image-placeholder small {
-    margin-top: 8px;
-    color: var(--cinza);
-    font-weight: 400;
-    font-size: .8rem;
-}
-
-/* Imagem principal da Home */
-.home-image {
-    height: 320px;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-/* Imagens dos cards da Home */
-.topic-image {
-    height: 185px;
-    overflow: hidden;
-}
-
-/* Imagem da seção de experiência */
-.secondary-image {
-    height: 260px;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-/* Imagens da página Palestras */
-.lecture-image {
-    height: 270px;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-.lecture-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Imagem da página Saiba Mais */
-.form-image {
-    height: 230px;
-    overflow: hidden;
-    border-radius: 8px;
-}
-
-/* Ajuste das imagens dentro dos espaços */
-.home-image img,
-.topic-image img,
-.secondary-image img,
-.lecture-image img,
-.form-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-/* Formulário */
-.form-card {
-    border-radius: 10px;
-}
-
-.form-card .form-control,
-.form-card .form-select {
-    border-color: #ced4da;
-    border-radius: 6px;
+/* ===================== FORMULÁRIOS ===================== */
+.form-control,
+.form-select {
     padding: .65rem .8rem;
 }
 
-.form-card .form-control:focus,
-.form-card .form-select:focus {
+.form-control:focus,
+.form-select:focus {
     border-color: var(--roxo);
-    box-shadow: 0 0 0 .15rem rgba(105, 80, 161, .15);
+    box-shadow: 0 0 0 .2rem rgba(105, 80, 161, .15);
 }
 
-.form-card .form-check-input:checked {
+.form-check-input:checked {
     background-color: var(--azul-marinho);
     border-color: var(--azul-marinho);
 }
 
-/* Resumo do pedido acompanha a rolagem no computador (abaixo do menu fixo) */
-@media (min-width: 992px) {
-    .resumo-pedido {
-        position: sticky;
-        top: 96px;
-    }
+/* Card do ingresso escolhido no formulário */
+.card-ingresso {
+    transition: border-color .2s, box-shadow .2s;
 }
 
-/* Seção final da página */
-.cta-technexus {
-    background-color: #f4f5fa;
+.card-ingresso.selecionado {
+    border-color: var(--destaque);
+    box-shadow: 0 0 0 1px var(--destaque);
+    background-color: rgba(143, 168, 255, .08);
 }
 
-/* Ajustes para telas menores */
-@media (max-width: 767.98px) {
-    .banner-technexus {
-        padding-top: 2.5rem !important;
-        padding-bottom: 2.5rem !important;
-    }
-
-    .banner-technexus .display-5 {
-        font-size: 2rem;
-    }
-
-    .home-image,
-    .secondary-image,
-    .lecture-image,
-    .form-image {
-        height: 210px;
-    }
-
-    .topic-image {
-        height: 185px;
-    }
-
-    .mapa-iframe {
-        height: 320px;
-    }
-
-    /* Abas do mapa quebram linha no celular */
-    #mapaTabs {
-        flex-wrap: wrap;
-    }
-}
-/* Opções selecionadas (ingresso, pagamento) com o azul-marinho do site */
-.btn-check:checked + .btn-outline-primary,
-.btn-outline-primary:active {
-    color: #fff;
-    background-color: var(--azul-marinho);
-    border-color: var(--azul-marinho);
+/* ===================== RODAPÉ ===================== */
+.footer-technexus {
+    background-color: #071640;
 }
 
-/* Links internos (#) param abaixo do menu fixo */
-html {
-    scroll-padding-top: 96px;
+.footer-technexus img {
+    height: 44px;
+    width: auto;
 }
 
-/* ===================== PAINEL ADMINISTRATIVO ===================== */
-@media (min-width: 992px) {
-    .admin-lateral {
-        min-height: calc(100vh - 65px);
-    }
-
-    .admin-lateral .offcanvas-lg {
-        position: sticky;
-        top: 65px;
-    }
-}
-
-.admin-menu .nav-link {
-    color: var(--texto);
-    font-weight: 500;
-    border-radius: 8px;
-}
-
-.admin-menu .nav-link:hover {
-    background-color: var(--fundo-claro);
-}
-
-.admin-menu .nav-link.active {
-    color: #fff;
-    background-color: var(--azul-marinho);
-}
-
-.admin-avatar {
-    width: 38px;
-    height: 38px;
-    flex-shrink: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    font-size: .8rem;
+.footer-titulo {
+    font-size: .85rem;
     font-weight: 700;
     color: #fff;
-    background: linear-gradient(135deg, var(--azul-marinho), var(--roxo));
+    margin-bottom: 1rem;
 }
 
-.admin-avatar-sm {
-    width: 32px;
-    height: 32px;
-    font-size: .7rem;
+.footer-texto {
+    color: rgba(255, 255, 255, .72);
 }
 
-.admin-icone {
-    width: 48px;
-    height: 48px;
-    flex-shrink: 0;
+.footer-links li {
+    margin-bottom: .55rem;
+}
+
+.footer-links a,
+.footer-topo {
+    color: rgba(255, 255, 255, .72);
+    text-decoration: none;
+    transition: color .2s;
+}
+
+.footer-links a:hover,
+.footer-topo:hover {
+    color: #fff;
+}
+
+.footer-icone {
+    color: var(--destaque);
+}
+
+.footer-social {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 12px;
-    font-size: 1.35rem;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgba(255, 255, 255, .08);
+    text-decoration: none;
+    transition: background-color .2s;
 }
 
-.admin-foto {
-    object-fit: cover;
+.footer-social:hover {
+    color: #fff;
+    background-color: var(--roxo);
 }
 
-.admin-busca {
-    max-width: 320px;
+.footer-linha {
+    border-color: rgba(255, 255, 255, .25);
 }
 
-/* ===================== PALESTRANTES (troca ao rolar) ===================== */
+/* ===================== PALESTRANTES / PALESTRAS (troca ao rolar) =====================
+   Usado em expositores.html e palestras.html (mesmo componente, mesmo visual) */
 .palestrantes-scroll {
-    --cor: #4dabf7;
+    --cor: var(--destaque);
     position: relative;
     color: #fff;
-    background: linear-gradient(160deg, #050f2e 0%, var(--azul-marinho) 55%, #241d57 100%);
+    background-color: #0a1640;
 }
 
 .palestrantes-palco {
     position: relative;
     padding: 4rem 0;
     overflow: hidden;
-}
-
-/* Brilho colorido de fundo (muda com a cor do palestrante) */
-.palestrante-slide::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    width: 620px;
-    height: 620px;
-    left: -180px;
-    top: 50%;
-    border-radius: 50%;
-    background: radial-gradient(circle, rgba(var(--cor-rgb), .35) 0%, transparent 65%);
-    transform: translateY(-50%);
-    pointer-events: none;
 }
 
 .palestrante-slide {
@@ -469,33 +540,27 @@ html {
 /* ---------- Foto ---------- */
 .palestrante-foto {
     position: relative;
-    max-width: 440px;
+    max-width: 420px;
     margin: 0 auto;
     aspect-ratio: 4 / 5;
-    border-radius: 28px;
+    border-radius: 14px;
     overflow: hidden;
-    box-shadow:
-        0 0 0 2px rgba(var(--cor-rgb), .7),
-        0 30px 80px -20px rgba(var(--cor-rgb), .55);
+    border: 1px solid rgba(255, 255, 255, .12);
 }
 
 .palestrante-foto img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 25%;
     display: block;
-    transition: transform .8s ease;
 }
 
 .palestrante-foto::after {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(5, 15, 46, .75) 0%, transparent 45%);
-}
-
-.palestrante-foto:hover img {
-    transform: scale(1.05);
+    background: linear-gradient(to top, rgba(5, 15, 46, .65) 0%, transparent 40%);
 }
 
 .palestrante-horario {
@@ -503,12 +568,60 @@ html {
     z-index: 1;
     left: 1rem;
     bottom: 1rem;
-    padding: .45rem .9rem;
-    border-radius: 999px;
+    padding: .4rem .8rem;
+    border-radius: 6px;
     font-weight: 600;
     font-size: .9rem;
-    color: #050f2e;
-    background-color: var(--cor);
+    color: var(--azul-marinho);
+    background-color: #fff;
+}
+
+/* ---------- Ficha da palestra (palestras.html, no lugar da foto) ---------- */
+.palestra-ficha {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 14px;
+    background-color: rgba(255, 255, 255, .05);
+    border: 1px solid rgba(255, 255, 255, .12);
+}
+
+.palestra-ficha dl {
+    margin: 0;
+}
+
+.palestra-ficha dt {
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .6);
+}
+
+.palestra-ficha dd {
+    margin: .2rem 0 1rem;
+    font-weight: 600;
+}
+
+.palestra-ficha dd:last-child {
+    margin-bottom: 0;
+}
+
+.palestra-autor {
+    display: flex;
+    align-items: center;
+    gap: .9rem;
+    padding-top: 1.25rem;
+    margin-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, .12);
+}
+
+.palestra-autor img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 25%;
 }
 
 /* ---------- Texto ---------- */
@@ -516,45 +629,33 @@ html {
     position: relative;
 }
 
-.palestrante-numero {
-    position: absolute;
-    z-index: -1;
-    top: -3.5rem;
-    right: 0;
-    margin: 0;
-    font-size: clamp(7rem, 14vw, 12rem);
-    font-weight: 800;
-    line-height: 1;
-    color: transparent;
-    -webkit-text-stroke: 2px rgba(var(--cor-rgb), .35);
-    user-select: none;
-}
-
 .palestrante-tema {
     display: inline-flex;
     align-items: center;
     margin-bottom: 1rem;
-    padding: .4rem .9rem;
-    border-radius: 999px;
     font-size: .8rem;
     font-weight: 700;
     letter-spacing: .06em;
     text-transform: uppercase;
     color: var(--cor);
-    background-color: rgba(var(--cor-rgb), .12);
-    border: 1px solid rgba(var(--cor-rgb), .4);
 }
 
 .palestrante-nome {
-    font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+    font-size: clamp(2.25rem, 5vw, 4rem);
     font-weight: 800;
-    line-height: 1.02;
+    line-height: 1.05;
     letter-spacing: -.02em;
     margin-bottom: .75rem;
 }
 
+/* Título de palestra (mais longo que um nome) */
+.palestrante-nome.titulo-palestra {
+    font-size: clamp(1.9rem, 3.6vw, 3rem);
+    line-height: 1.1;
+}
+
 .palestrante-palestra {
-    font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+    font-size: clamp(1.05rem, 1.6vw, 1.3rem);
     font-weight: 600;
     color: var(--cor);
     margin-bottom: 1.5rem;
@@ -571,11 +672,11 @@ html {
     display: inline-flex;
     align-items: center;
     gap: .5rem;
-    padding: .5rem .85rem;
-    border-radius: 12px;
+    padding: .45rem .8rem;
+    border-radius: 8px;
     font-size: .9rem;
     font-weight: 500;
-    background-color: rgba(255, 255, 255, .07);
+    background-color: rgba(255, 255, 255, .06);
     border: 1px solid rgba(255, 255, 255, .12);
 }
 
@@ -585,7 +686,7 @@ html {
 
 .palestrante-bio {
     max-width: 600px;
-    color: rgba(255, 255, 255, .75);
+    color: rgba(255, 255, 255, .78);
     margin-bottom: 2rem;
 }
 
@@ -625,27 +726,30 @@ html {
     visibility: visible;
 }
 
-/* Entrada: foto cresce, textos sobem um depois do outro */
-.modo-rolagem .palestrante-foto {
-    transform: translateY(60px) scale(.92);
+/* Entrada: foto/ficha sobe, textos aparecem um depois do outro */
+.modo-rolagem .palestrante-foto,
+.modo-rolagem .palestra-ficha {
+    transform: translateY(40px);
     transition: transform .8s cubic-bezier(.2, .8, .2, 1);
 }
 
-.modo-rolagem .palestrante-slide.passou .palestrante-foto {
-    transform: translateY(-60px) scale(.92);
+.modo-rolagem .palestrante-slide.passou .palestrante-foto,
+.modo-rolagem .palestrante-slide.passou .palestra-ficha {
+    transform: translateY(-40px);
 }
 
 .modo-rolagem .palestrante-texto > * {
     opacity: 0;
-    transform: translateY(40px);
+    transform: translateY(30px);
     transition: opacity .6s ease, transform .6s cubic-bezier(.2, .8, .2, 1);
 }
 
 .modo-rolagem .palestrante-slide.passou .palestrante-texto > * {
-    transform: translateY(-40px);
+    transform: translateY(-30px);
 }
 
-.modo-rolagem .ativo .palestrante-foto {
+.modo-rolagem .ativo .palestrante-foto,
+.modo-rolagem .ativo .palestra-ficha {
     transform: none;
 }
 
@@ -660,10 +764,6 @@ html {
 .modo-rolagem .ativo .palestrante-texto > :nth-child(5) { transition-delay: .34s; }
 .modo-rolagem .ativo .palestrante-texto > :nth-child(6) { transition-delay: .42s; }
 .modo-rolagem .ativo .palestrante-texto > :nth-child(7) { transition-delay: .50s; }
-
-.modo-rolagem .ativo .palestrante-numero {
-    opacity: 1;
-}
 
 .modo-rolagem .palestrantes-progresso {
     position: absolute;
@@ -716,7 +816,7 @@ html {
     50%      { transform: translate(-50%, 6px); }
 }
 
-/* ===== Celular e tablet: um embaixo do outro ===== */
+/* Celular e tablet: um embaixo do outro */
 @media (max-width: 991.98px) {
     .palestrante-slide + .palestrante-slide {
         margin-top: 2rem;
@@ -725,32 +825,30 @@ html {
     }
 
     .palestrante-foto {
-        max-width: 360px;
+        max-width: 340px;
     }
 
-    .palestrante-numero {
-        top: -2rem;
-        font-size: 6rem;
-    }
-
-    .palestrante-slide::before {
-        left: 50%;
-        top: 20%;
-        width: 420px;
-        height: 420px;
-        transform: translate(-50%, -50%);
-    }
 }
 
-/* Telas de computador mais baixas: foto e textos um pouco menores para caber */
+/* Telas de computador mais baixas: foto e textos menores para caber */
 @media (min-width: 992px) and (max-height: 820px) {
     .palestrante-foto {
-        max-width: 340px;
+        max-width: 320px;
+    }
+
+    .palestra-ficha {
+        padding: 1.5rem;
+    }
+
+    /* Em telas baixas a foto da palestra fica mais estreita para caber */
+    .palestra-ficha-foto {
+        --bs-aspect-ratio: 40%;
     }
 
     .palestrante-bio {
         display: -webkit-box;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         margin-bottom: 1.25rem;
@@ -759,4 +857,106 @@ html {
     .palestrante-destaques {
         margin-bottom: 1rem;
     }
+}
+
+/* ===================== PAINEL ADMINISTRATIVO ===================== */
+@media (min-width: 992px) {
+    .admin-lateral {
+        min-height: calc(100vh - 65px);
+    }
+
+    .admin-lateral .offcanvas-lg {
+        position: sticky;
+        top: 65px;
+    }
+}
+
+.admin-menu .nav-link {
+    color: var(--texto);
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.admin-menu .nav-link:hover {
+    background-color: var(--fundo-claro);
+}
+
+.admin-menu .nav-link.active {
+    color: #fff;
+    background-color: var(--azul-marinho);
+}
+
+.admin-avatar {
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: .8rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: var(--roxo);
+}
+
+.admin-avatar-sm {
+    width: 32px;
+    height: 32px;
+    font-size: .7rem;
+}
+
+.admin-icone {
+    width: 48px;
+    height: 48px;
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.35rem;
+}
+
+.admin-foto {
+    object-fit: cover;
+}
+
+.admin-busca {
+    max-width: 320px;
+}
+
+/* ===================== AJUSTES GERAIS PARA TELAS MENORES ===================== */
+@media (max-width: 767.98px) {
+    .banner-technexus {
+        padding: 2.5rem 0;
+    }
+
+    .banner-technexus .display-5 {
+        font-size: 2rem;
+    }
+
+    .mapa-iframe {
+        height: 320px;
+    }
+
+    #mapaTabs {
+        flex-wrap: wrap;
+    }
+}
+
+/* ===================== BOTÃO FIXO DO WHATSAPP ===================== */
+.btn-whatsapp {
+    width: 56px;
+    height: 56px;
+    font-size: 1.75rem;
+    color: #fff;
+    background-color: #25d366;
+    border: 0;
+    box-shadow: 0 .5rem 1.25rem rgba(0, 0, 0, .3);
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+    color: #fff;
+    background-color: #1ebe5b;
 }
