@@ -76,6 +76,7 @@
     --bs-accordion-bg: rgba(255, 255, 255, .04);
     --bs-accordion-active-bg: rgba(143, 168, 255, .1);
     --bs-accordion-active-color: #fff;
+    --bs-accordion-btn-focus-box-shadow: none;
 }
 
 [data-bs-theme="dark"] .form-control,
