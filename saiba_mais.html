@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- ===== MENU (igual em todas as páginas) ===== -->
+    <!-- menu -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-technexus" aria-label="Menu principal">
             <div class="container">
@@ -32,7 +32,10 @@
                         <li class="nav-item"><a class="nav-link" href="expositores.html"><i class="bi bi-people me-2 d-md-none"></i>Expositores</a></li>
                         <li class="nav-item"><a class="nav-link" href="comprar_ingresso.html"><i class="bi bi-ticket-perforated me-2 d-md-none"></i>Ingressos</a></li>
                     </ul>
-                    <a href="saiba_mais.html" class="btn btn-saiba-mais fw-semibold text-nowrap px-3 px-xl-4 active" aria-current="page"><i class="bi bi-envelope-paper me-2"></i>Saiba mais</a>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="saiba_mais.html" class="btn btn-saiba-mais fw-semibold text-nowrap px-3 px-xl-4 flex-grow-1 active" aria-current="page"><i class="bi bi-envelope-paper me-2"></i>Saiba mais</a>
+                        <a href="admin/login.html" class="btn-admin" aria-label="Área do organizador" title="Área do organizador"><i class="bi bi-person-gear"></i></a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -49,7 +52,7 @@
         <section class="py-5">
             <div class="container py-lg-4">
                 <div class="row g-5">
-                    <!-- Informações -->
+                    <!-- informacoes -->
                     <div class="col-12 col-lg-5 order-2 order-lg-1">
                         <div class="ratio ratio-3x2 rounded-3 overflow-hidden mb-4">
                             <img src="img/image.png" class="object-fit-cover" alt="Palestrante apresentando conteúdo em uma tela" loading="lazy">
@@ -80,7 +83,7 @@
                         </ul>
                     </div>
 
-                    <!-- Formulário -->
+                    <!-- formulario -->
                     <div class="col-12 col-lg-7 order-1 order-lg-2">
                         <div class="card">
                             <div class="card-body p-4 p-md-5">
@@ -143,7 +146,7 @@
         </section>
     </main>
 
-    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <!-- rodape -->
     <footer class="footer-technexus text-white pt-5 pb-4">
         <div class="container">
             <div class="row g-4 g-lg-5">
@@ -199,8 +202,7 @@
         </div>
     </footer>
 
-    <!-- ===== BOTÃO FIXO DO WHATSAPP =====
-         Para abrir direto na conversa da organização, troque o link por https://wa.me/55DDDNUMERO -->
+    <!-- whatsapp (falta colocar o numero no link) -->
     <a href="https://wa.me/?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20TechNexus." class="btn btn-whatsapp rounded-circle position-fixed bottom-0 end-0 m-3 m-md-4 z-3 d-inline-flex align-items-center justify-content-center" target="_blank" rel="noopener" aria-label="Falar com a TechNexus pelo WhatsApp" title="Falar pelo WhatsApp">
         <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </a>

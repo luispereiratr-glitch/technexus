@@ -1,5 +1,5 @@
-// Máscaras e validação dos formulários da TechNexus
-// Uso: coloque data-mascara="telefone|cpf|cnpj|cep|cartao|validade" no <input>
+// mascaras e validacao dos formularios
+// usar data-mascara="telefone|cpf|cnpj|cep|cartao|validade" no input
 
 (function () {
     const mascaras = {
@@ -23,13 +23,13 @@
     document.querySelectorAll("[data-mascara]").forEach(campo => {
         const formatar = mascaras[campo.dataset.mascara];
         if (!formatar) return;
-        // "input" também dispara quando o navegador preenche sozinho (autocomplete)
+        // pega o autocomplete tambem
         campo.addEventListener("input", () => {
             campo.value = formatar(campo.value.replace(/\D/g, ""));
         });
     });
 
-    // Validação no estilo do Bootstrap (.was-validated)
+    // validacao do bootstrap
     document.querySelectorAll("form").forEach(form => {
         form.setAttribute("novalidate", "");
         form.addEventListener("submit", evento => {

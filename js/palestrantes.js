@@ -1,5 +1,5 @@
-// Palestrantes: ao rolar a página, a seção fica "presa" na tela e troca de palestrante.
-// No celular (ou com "reduzir movimento" ligado) os palestrantes aparecem um embaixo do outro.
+// troca os palestrantes conforme rola a pagina
+// no celular fica um embaixo do outro
 
 (function () {
     const secao = document.querySelector("[data-palestrantes]");
@@ -18,7 +18,7 @@
         atual = indice;
         slides.forEach((slide, i) => {
             slide.classList.toggle("ativo", i === indice);
-            slide.classList.toggle("passou", i < indice);   // os anteriores saem para cima
+            slide.classList.toggle("passou", i < indice);
             slide.setAttribute("aria-hidden", i === indice ? "false" : "true");
             slide.inert = i !== indice;
         });
@@ -29,7 +29,7 @@
         secao.classList.toggle("no-ultimo", indice === total - 1);
     }
 
-    // Quanto da seção já foi rolado (0 a 1) define o palestrante da vez
+    // ve qual palestrante mostrar pela rolagem
     function aoRolar() {
         if (!modoRolagem.matches) return;
         const caixa = secao.getBoundingClientRect();
@@ -38,7 +38,7 @@
         ativar(Math.floor(progresso * total));
     }
 
-    // Rola a página até o slide escolhido (usado pelo indicador e pelos links com #)
+    // rola ate o slide
     function irPara(indice, comportamento) {
         const percurso = secao.offsetHeight - window.innerHeight;
         const alvo = secao.getBoundingClientRect().top + window.scrollY + percurso * (indice + 0.5) / total;
@@ -49,14 +49,14 @@
         ponto.addEventListener("click", () => irPara(Number(ponto.dataset.irPara), "smooth"));
     });
 
-    // Links como "palestras.html#palestra-ia" abrem direto no slide certo
+    // link com # abre no slide certo
     function abrirPeloEndereco() {
         if (!modoRolagem.matches || !location.hash) return;
         const indice = slides.findIndex(slide => "#" + slide.id === location.hash);
         if (indice < 0) return;
-        // O salto nativo do navegador pode rolar o "palco" por dentro; volta ao normal
+        // arruma a rolagem
         secao.querySelector(".palestrantes-palco").scrollTop = 0;
-        irPara(indice, "instant"); // "auto" herdaria o scroll-behavior: smooth do Bootstrap
+        irPara(indice, "instant"); // com "auto" ficava suave
         aoRolar();
     }
 
@@ -66,7 +66,7 @@
             atual = -1;
             aoRolar();
         } else {
-            // celular: todos visíveis, sem travar a rolagem
+            // celular
             slides.forEach(slide => {
                 slide.classList.add("ativo");
                 slide.classList.remove("passou");
@@ -82,7 +82,6 @@
     window.addEventListener("hashchange", abrirPeloEndereco);
     modoRolagem.addEventListener("change", configurar);
     configurar();
-    // Espera o layout final (imagens/fontes) antes de pular para o slide do endereço
-    // (o pequeno atraso deixa o navegador terminar o salto nativo para o #)
+    // espera carregar tudo antes de pular pro slide
     window.addEventListener("load", () => setTimeout(abrirPeloEndereco, 50));
 })();

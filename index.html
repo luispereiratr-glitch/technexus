@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- ===== MENU (igual em todas as páginas) ===== -->
+    <!-- menu -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-technexus" aria-label="Menu principal">
             <div class="container">
@@ -32,14 +32,17 @@
                         <li class="nav-item"><a class="nav-link" href="expositores.html"><i class="bi bi-people me-2 d-md-none"></i>Expositores</a></li>
                         <li class="nav-item"><a class="nav-link" href="comprar_ingresso.html"><i class="bi bi-ticket-perforated me-2 d-md-none"></i>Ingressos</a></li>
                     </ul>
-                    <a href="saiba_mais.html" class="btn btn-saiba-mais fw-semibold text-nowrap px-3 px-xl-4"><i class="bi bi-envelope-paper me-2"></i>Saiba mais</a>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="saiba_mais.html" class="btn btn-saiba-mais fw-semibold text-nowrap px-3 px-xl-4 flex-grow-1"><i class="bi bi-envelope-paper me-2"></i>Saiba mais</a>
+                        <a href="admin/login.html" class="btn-admin" aria-label="Área do organizador" title="Área do organizador"><i class="bi bi-person-gear"></i></a>
+                    </div>
                 </div>
             </div>
         </nav>
     </header>
 
     <main>
-        <!-- ===== PRIMEIRA SEÇÃO ===== -->
+        <!-- banner -->
         <section class="hero text-white py-5">
             <div class="container py-lg-5">
                 <div class="row align-items-center g-5">
@@ -101,7 +104,7 @@
             </div>
         </section>
 
-        <!-- ===== SOBRE O EVENTO ===== -->
+        <!-- sobre o evento -->
         <section class="py-5">
             <div class="container py-lg-4">
                 <div class="row g-5 align-items-center">
@@ -131,7 +134,7 @@
             </div>
         </section>
 
-        <!-- ===== PALESTRANTES ===== -->
+        <!-- palestrantes -->
         <section class="py-5 bg-body-tertiary">
             <div class="container py-lg-4">
                 <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end gap-2 mb-4 mb-md-5">
@@ -198,7 +201,7 @@
             </div>
         </section>
 
-        <!-- ===== CHAMADA FINAL ===== -->
+        <!-- chamada final -->
         <section class="py-5">
             <div class="container py-lg-4">
                 <div class="bg-primary-subtle rounded-3 p-4 p-md-5">
@@ -215,7 +218,7 @@
             </div>
         </section>
 
-        <!-- ===== PATROCINADORES (empresas fictícias) ===== -->
+        <!-- patrocinadores -->
         <section class="py-5 border-top" aria-labelledby="tituloPatrocinadores">
             <div class="container">
                 <h2 id="tituloPatrocinadores" class="h6 text-center text-body-secondary fw-semibold mb-4 mb-md-5">Patrocinadores desta edição</h2>
@@ -234,7 +237,7 @@
         </section>
     </main>
 
-    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <!-- rodape -->
     <footer class="footer-technexus text-white pt-5 pb-4">
         <div class="container">
             <div class="row g-4 g-lg-5">
@@ -290,8 +293,7 @@
         </div>
     </footer>
 
-    <!-- ===== BOTÃO FIXO DO WHATSAPP =====
-         Para abrir direto na conversa da organização, troque o link por https://wa.me/55DDDNUMERO -->
+    <!-- whatsapp (falta colocar o numero no link) -->
     <a href="https://wa.me/?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20TechNexus." class="btn btn-whatsapp rounded-circle position-fixed bottom-0 end-0 m-3 m-md-4 z-3 d-inline-flex align-items-center justify-content-center" target="_blank" rel="noopener" aria-label="Falar com a TechNexus pelo WhatsApp" title="Falar pelo WhatsApp">
         <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </a>

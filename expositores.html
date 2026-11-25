@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- ===== MENU (igual em todas as páginas) ===== -->
+    <!-- menu -->
     <header class="sticky-top">
         <nav class="navbar navbar-expand-lg navbar-dark navbar-technexus" aria-label="Menu principal">
             <div class="container">
@@ -32,7 +32,10 @@
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="expositores.html"><i class="bi bi-people me-2 d-md-none"></i>Expositores</a></li>
                         <li class="nav-item"><a class="nav-link" href="comprar_ingresso.html"><i class="bi bi-ticket-perforated me-2 d-md-none"></i>Ingressos</a></li>
                     </ul>
-                    <a href="saiba_mais.html" class="btn btn-saiba-mais fw-semibold text-nowrap px-3 px-xl-4"><i class="bi bi-envelope-paper me-2"></i>Saiba mais</a>
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="saiba_mais.html" class="btn btn-saiba-mais fw-semibold text-nowrap px-3 px-xl-4 flex-grow-1"><i class="bi bi-envelope-paper me-2"></i>Saiba mais</a>
+                        <a href="admin/login.html" class="btn-admin" aria-label="Área do organizador" title="Área do organizador"><i class="bi bi-person-gear"></i></a>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -46,12 +49,12 @@
             </div>
         </section>
 
-        <!-- ===== EXPOSITORES: ao rolar a página, passa para o próximo ===== -->
+        <!-- expositores -->
         <section class="palestrantes-scroll" data-palestrantes aria-label="Expositores">
             <div class="palestrantes-palco">
                 <div class="container h-100 position-relative">
 
-                    <!-- Indicador lateral: mostra em qual expositor está e permite pular -->
+                    <!-- bolinhas do lado -->
                     <nav class="palestrantes-progresso" aria-label="Escolher expositor">
                         <button type="button" class="palestrantes-ponto ativo" data-ir-para="0"><span class="visually-hidden">Levi Martinelo</span></button>
                         <button type="button" class="palestrantes-ponto" data-ir-para="1"><span class="visually-hidden">Aron Ribeiro</span></button>
@@ -144,7 +147,7 @@
             </div>
         </section>
 
-        <!-- ===== DÚVIDAS (link simples, sem botão) ===== -->
+        <!-- duvidas -->
         <section class="py-5">
             <div class="container text-center py-lg-4">
                 <h2 class="h4 fw-bold mb-2">Quer saber onde e quando cada palestra acontece?</h2>
@@ -154,7 +157,7 @@
         </section>
     </main>
 
-    <!-- ===== RODAPÉ (igual em todas as páginas) ===== -->
+    <!-- rodape -->
     <footer class="footer-technexus text-white pt-5 pb-4">
         <div class="container">
             <div class="row g-4 g-lg-5">
@@ -210,8 +213,7 @@
         </div>
     </footer>
 
-    <!-- ===== BOTÃO FIXO DO WHATSAPP =====
-         Para abrir direto na conversa da organização, troque o link por https://wa.me/55DDDNUMERO -->
+    <!-- whatsapp (falta colocar o numero no link) -->
     <a href="https://wa.me/?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20TechNexus." class="btn btn-whatsapp rounded-circle position-fixed bottom-0 end-0 m-3 m-md-4 z-3 d-inline-flex align-items-center justify-content-center" target="_blank" rel="noopener" aria-label="Falar com a TechNexus pelo WhatsApp" title="Falar pelo WhatsApp">
         <i class="bi bi-whatsapp" aria-hidden="true"></i>
     </a>

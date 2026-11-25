@@ -1,27 +1,20 @@
-/* =====================================================================
-   TechNexus — folha de estilos única do site
-   Paleta: azul-marinho (base), roxo (destaque), branco e cinzas neutros
-   Layout e componentes: Bootstrap 5.3 (classes utilitárias, card, list-group,
-   ratio, carousel). Este arquivo só guarda a identidade visual e o que o
-   Bootstrap não oferece.
-   Botões: .btn-primary, .btn-outline-primary e, em fundo escuro, .btn-light / .btn-outline-light
-   ===================================================================== */
+/* TechNexus - estilos do site */
 
 :root {
     --azul-marinho: #091c52;
     --azul-marinho-claro: #1a2f72;
     --roxo: #6950a1;
-    --destaque: #8fa8ff;          /* azul-lavanda usado sobre fundo escuro */
+    --destaque: #8fa8ff;          /* pro fundo escuro */
     --texto: #1f2430;
     --fundo-claro: #f4f5fa;
 
-    /* Ajustes do Bootstrap: textos secundários mais escuros (melhor contraste) */
+    /* textos secundarios */
     --bs-secondary-color: #4a5263;
     --bs-secondary-color-rgb: 74, 82, 99;
     --bs-body-color: #1f2430;
     --bs-border-radius: 8px;
     --bs-border-radius-lg: 10px;
-    /* "primary" do Bootstrap passa a ser o azul-marinho do site (textos, badges, alertas) */
+    /* primary = azul do site */
     --bs-primary: #091c52;
     --bs-primary-rgb: 9, 28, 82;
     --bs-primary-text-emphasis: #091c52;
@@ -33,11 +26,7 @@
     --bs-link-hover-color-rgb: 105, 80, 161;
 }
 
-/* ===================== TEMA ESCURO DO SITE =====================
-   Todas as páginas públicas usam <html data-bs-theme="dark">, o tema escuro
-   nativo do Bootstrap 5.3, recolorido com o azul-marinho da TechNexus.
-   Cards, formulários, listas e acordeões se adaptam sozinhos.
-   (O painel admin continua no tema claro definido acima.) */
+/* tema escuro (paginas do site, o admin fica claro) */
 :root[data-bs-theme="dark"] {
     --bs-body-bg: #0a1640;
     --bs-body-bg-rgb: 10, 22, 64;
@@ -45,7 +34,7 @@
     --bs-body-color-rgb: 230, 233, 242;
     --bs-emphasis-color: #fff;
     --bs-emphasis-color-rgb: 255, 255, 255;
-    --bs-secondary-color: rgba(230, 233, 242, .72);
+    --bs-secondary-color: rgba(230, 233, 242, .85);
     --bs-secondary-color-rgb: 230, 233, 242;
     --bs-secondary-bg: #13235c;
     --bs-secondary-bg-rgb: 19, 35, 92;
@@ -72,7 +61,7 @@
     color-scheme: dark;
 }
 
-/* Cards e listas: superfície levemente mais clara que o fundo, como na ficha das palestras */
+/* cards e listas */
 [data-bs-theme="dark"] .card {
     --bs-card-bg: rgba(255, 255, 255, .04);
     --bs-card-border-color: rgba(255, 255, 255, .12);
@@ -98,7 +87,7 @@
     color: #1f2430;
 }
 
-/* Botões no fundo escuro: principal branco, secundário com contorno branco */
+/* botoes no fundo escuro */
 [data-bs-theme="dark"] .btn-primary,
 [data-bs-theme="dark"] .btn-light {
     --bs-btn-color: var(--azul-marinho);
@@ -139,7 +128,7 @@
 }
 
 html {
-    scroll-padding-top: 96px; /* links internos (#) param abaixo do menu fixo */
+    scroll-padding-top: 96px; /* por causa do menu fixo */
 }
 
 body {
@@ -155,7 +144,7 @@ img {
     max-width: 100%;
 }
 
-/* ===================== BOTÕES ===================== */
+/* botoes */
 .btn {
     border-radius: 8px;
     font-weight: 600;
@@ -196,7 +185,7 @@ img {
     --bs-btn-hover-color: var(--azul-marinho);
 }
 
-/* Opções selecionadas (ingresso, pagamento) */
+/* opcoes selecionadas */
 .btn-check:checked + .btn-outline-primary,
 .btn-outline-primary:active {
     color: #fff;
@@ -204,7 +193,7 @@ img {
     border-color: var(--azul-marinho);
 }
 
-/* ===================== MENU ===================== */
+/* menu */
 .navbar-technexus {
     background-color: var(--azul-marinho);
     border-bottom: 1px solid rgba(255, 255, 255, .08);
@@ -234,7 +223,7 @@ img {
     background-color: rgba(255, 255, 255, .14);
 }
 
-/* Botão "Saiba mais" do menu segue o estilo .btn-light */
+/* botao saiba mais */
 .btn-saiba-mais {
     color: var(--azul-marinho);
     background-color: #fff;
@@ -259,7 +248,7 @@ img {
     }
 }
 
-/* ===================== BANNER DAS PÁGINAS INTERNAS ===================== */
+/* banner das paginas internas */
 .banner-technexus {
     color: #fff;
     background-color: var(--azul-marinho);
@@ -280,7 +269,7 @@ img {
     margin-bottom: 0;
 }
 
-/* ===================== HOME: PRIMEIRA SEÇÃO ===================== */
+/* home */
 .hero-logo {
     width: 100%;
     max-width: 240px;
@@ -315,12 +304,12 @@ img {
     height: 3px;
 }
 
-/* Enquadra o rosto nas fotos dos palestrantes (o Bootstrap não tem utilitário para isso) */
+/* enquadrar o rosto nas fotos */
 .foto-rosto {
     object-position: center 22%;
 }
 
-/* ===================== PATROCINADORES (logotipos fictícios) ===================== */
+/* patrocinadores */
 .logo-patrocinador {
     color: rgba(255, 255, 255, .5);
     line-height: 1;
@@ -391,7 +380,7 @@ img {
     text-transform: uppercase;
 }
 
-/* ===================== PROGRAMAÇÃO ===================== */
+/* programacao */
 .nome-palestrante {
     font-size: .72rem;
     letter-spacing: .06em;
@@ -425,7 +414,7 @@ img {
     background-color: #fff;
 }
 
-/* ===================== FORMULÁRIOS ===================== */
+/* formularios */
 .form-control,
 .form-select {
     padding: .65rem .8rem;
@@ -442,7 +431,7 @@ img {
     border-color: var(--azul-marinho);
 }
 
-/* Card do ingresso escolhido no formulário */
+/* ingresso escolhido */
 .card-ingresso {
     transition: border-color .2s, box-shadow .2s;
 }
@@ -453,9 +442,10 @@ img {
     background-color: rgba(143, 168, 255, .08);
 }
 
-/* ===================== RODAPÉ ===================== */
+/* rodape */
 .footer-technexus {
-    background-color: #071640;
+    background-color: var(--bs-body-bg);
+    border-top: 1px solid rgba(255, 255, 255, .1);
 }
 
 .footer-technexus img {
@@ -494,6 +484,47 @@ img {
     color: var(--destaque);
 }
 
+/* botao admin */
+.btn-admin {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    color: rgba(255, 255, 255, .55);
+    font-size: 1.15rem;
+    text-decoration: none;
+    transition: color .2s, background-color .2s;
+}
+
+.btn-admin:hover,
+.btn-admin:focus-visible {
+    color: #fff;
+    background-color: rgba(255, 255, 255, .12);
+}
+
+/* login */
+.login-pagina {
+    min-height: 100vh;
+    background-image: radial-gradient(circle at 20% 10%, rgba(105, 80, 161, .35), transparent 45%),
+                      linear-gradient(180deg, var(--azul-marinho) 0%, #040c26 100%);
+}
+
+.login-cartao {
+    width: 100%;
+    max-width: 420px;
+    background-color: rgba(14, 28, 79, .85);
+    border: 1px solid rgba(255, 255, 255, .12);
+    border-radius: 14px;
+}
+
+.login-cartao .login-logo {
+    height: 44px;
+    width: auto;
+}
+
 .footer-social {
     display: inline-flex;
     align-items: center;
@@ -516,8 +547,7 @@ img {
     border-color: rgba(255, 255, 255, .25);
 }
 
-/* ===================== PALESTRANTES / PALESTRAS (troca ao rolar) =====================
-   Usado em expositores.html e palestras.html (mesmo componente, mesmo visual) */
+/* palestrantes / palestras */
 .palestrantes-scroll {
     --cor: var(--destaque);
     position: relative;
@@ -537,7 +567,7 @@ img {
     padding: 2rem 0;
 }
 
-/* ---------- Foto ---------- */
+/* foto */
 .palestrante-foto {
     position: relative;
     max-width: 420px;
@@ -576,7 +606,7 @@ img {
     background-color: #fff;
 }
 
-/* ---------- Ficha da palestra (palestras.html, no lugar da foto) ---------- */
+/* ficha da palestra */
 .palestra-ficha {
     max-width: 420px;
     margin: 0 auto;
@@ -624,7 +654,7 @@ img {
     object-position: center 25%;
 }
 
-/* ---------- Texto ---------- */
+/* texto */
 .palestrante-texto {
     position: relative;
 }
@@ -648,7 +678,7 @@ img {
     margin-bottom: .75rem;
 }
 
-/* Título de palestra (mais longo que um nome) */
+/* titulo da palestra */
 .palestrante-nome.titulo-palestra {
     font-size: clamp(1.9rem, 3.6vw, 3rem);
     line-height: 1.1;
@@ -690,13 +720,13 @@ img {
     margin-bottom: 2rem;
 }
 
-/* ---------- Indicador lateral e dica ---------- */
+/* indicador lateral */
 .palestrantes-progresso,
 .palestrantes-dica {
     display: none;
 }
 
-/* ===== Computador: a seção fica presa e troca ao rolar ===== */
+/* computador */
 .palestrantes-scroll.modo-rolagem {
     height: calc(var(--total, 3) * 100vh);
 }
@@ -709,7 +739,7 @@ img {
 }
 
 .modo-rolagem .palestrantes-palco > .container {
-    padding-top: 65px; /* altura do menu fixo */
+    padding-top: 65px; /* menu */
 }
 
 .modo-rolagem .palestrante-slide {
@@ -726,7 +756,7 @@ img {
     visibility: visible;
 }
 
-/* Entrada: foto/ficha sobe, textos aparecem um depois do outro */
+/* animacao de entrada */
 .modo-rolagem .palestrante-foto,
 .modo-rolagem .palestra-ficha {
     transform: translateY(40px);
@@ -816,7 +846,7 @@ img {
     50%      { transform: translate(-50%, 6px); }
 }
 
-/* Celular e tablet: um embaixo do outro */
+/* celular e tablet */
 @media (max-width: 991.98px) {
     .palestrante-slide + .palestrante-slide {
         margin-top: 2rem;
@@ -830,7 +860,7 @@ img {
 
 }
 
-/* Telas de computador mais baixas: foto e textos menores para caber */
+/* telas mais baixas */
 @media (min-width: 992px) and (max-height: 820px) {
     .palestrante-foto {
         max-width: 320px;
@@ -840,7 +870,7 @@ img {
         padding: 1.5rem;
     }
 
-    /* Em telas baixas a foto da palestra fica mais estreita para caber */
+    /* foto menor */
     .palestra-ficha-foto {
         --bs-aspect-ratio: 40%;
     }
@@ -859,7 +889,7 @@ img {
     }
 }
 
-/* ===================== PAINEL ADMINISTRATIVO ===================== */
+/* painel administrativo */
 @media (min-width: 992px) {
     .admin-lateral {
         min-height: calc(100vh - 65px);
@@ -925,7 +955,7 @@ img {
     max-width: 320px;
 }
 
-/* ===================== AJUSTES GERAIS PARA TELAS MENORES ===================== */
+/* telas menores */
 @media (max-width: 767.98px) {
     .banner-technexus {
         padding: 2.5rem 0;
@@ -944,7 +974,7 @@ img {
     }
 }
 
-/* ===================== BOTÃO FIXO DO WHATSAPP ===================== */
+/* whatsapp */
 .btn-whatsapp {
     width: 56px;
     height: 56px;
